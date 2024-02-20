@@ -1,0 +1,16 @@
+.tab {
+  padding: scale(10) scale(50) scale(12);
+  border: 1.5px solid $silver-gray;
+  border-radius: 50px;
+  font-size: clamp(16px, scale(20), 24px);
+  font-weight: 500;
+  font-family: $founder;
+  display: block;
+  transition: 0.35s;
+  background: $white;
+  &:hover,
+  &--active {
+    background: black;
+    color: white;
+  }
+}

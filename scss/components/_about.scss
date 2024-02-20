@@ -1,0 +1,102 @@
+.about {
+  $self: &;
+  background: $gray-lightest;
+  display: flex;
+  position: relative;
+  .container {
+    position: relative;
+  }
+
+  #{$self}__content {
+    flex: 1;
+    margin: scale(178) 0;
+    position: relative;
+    z-index: 1;
+    h2 {
+      font-size: clamp(48px, scale(120), 140px);
+      font-family: $founder;
+      font-weight: 500;
+      margin: 0;
+      width: 75%;
+      position: relative;
+      line-height: 0.9;
+      color: $bright-red;
+      z-index: 3;
+      &:after {
+        content: "";
+        display: block;
+        width: scale(260);
+        height: 4px;
+        background-color: $bright-red;
+        margin: scale(30) 0;
+        border-radius: 50px;
+      }
+    }
+    p {
+      margin-top: 0;
+      font-size: scale(24);
+      font-size: clamp(18px, scale(24), 30px);
+      line-height: 1.2;
+      width: 32%;
+      margin-bottom: 30px;
+    }
+  }
+  #{$self}__image {
+    position: absolute;
+    flex: 1;
+
+    height: calc(100% + 20vw);
+    width: 50%;
+    right: 0;
+    background-color: $silver-gray;
+    margin: scale(-100) scale(-50) scale(-70) 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: luminosity;
+    }
+  }
+  #{$self}__image__overlay {
+    position: absolute;
+    bottom: 0;
+
+    left: 50%;
+    transform: translate(-50%, 30%);
+
+    img {
+      width: 100vw;
+      opacity: 0.5;
+    }
+  }
+  @include xs {
+    .container {
+      flex-direction: column;
+    }
+    #{$self}__content {
+      h2 {
+        width: 100%;
+      }
+      p {
+        width: 100%;
+      }
+      a {
+        display: none;
+      }
+    }
+    #{$self}__image {
+      position: static;
+      width: 100%;
+      margin: 0;
+    }
+    #{$self}__image__overlay {
+      bottom: auto;
+      top: 50px;
+      img {
+        width: 150vw;
+      }
+    }
+  }
+}

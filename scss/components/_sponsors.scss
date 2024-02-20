@@ -1,0 +1,36 @@
+.sponsors {
+  padding: scale(150) 0 scale(100);
+  background-color: $gray-light;
+  .logos-container {
+    ul {
+      display: flex;
+      gap: scale(70);
+      align-items: center;
+      justify-content: center;
+      li {
+        img {
+          vertical-align: top;
+          width: scale(250);
+          object-fit: contain;
+          filter: grayscale(1);
+          &:hover {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+  @include xs {
+    .logos-container {
+      overflow: hidden;
+      ul {
+        li {
+          img {
+            width: 124px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

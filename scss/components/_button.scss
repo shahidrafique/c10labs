@@ -1,0 +1,55 @@
+.button {
+  $self: &;
+  background-color: $white;
+  font-size: clamp(16px, scale(18), 20px);
+  padding: 0 scale(30) 0 clamp(48px, scale(70), 120px);
+  border-radius: 100px;
+  position: relative;
+  align-items: center;
+  height: clamp(48px, scale(55), 70px);
+  border: 1px solid $gray-light;
+  color: $black;
+  display: inline-flex;
+  &:before {
+    content: "";
+    display: block;
+    width: clamp(48px, scale(55), 70px);
+    height: clamp(48px, scale(55), 70px);
+    border-radius: 60px;
+    background: url("/arrow.svg") no-repeat center $black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+  }
+
+  &:hover {
+    color: $bright-red;
+    border: 1px solid $bright-red;
+    &:before {
+      content: "";
+      background: url("/arrow.svg") no-repeat center $bright-red;
+    }
+  }
+}
+
+.button__more {
+  font-size: clamp(16px, scale(18), 20px);
+  color: $silver-gray;
+  display: flex;
+  gap: clamp(10px, scale(10), 14px);
+  align-items: center;
+  &:after {
+    content: "";
+    display: block;
+    width: clamp(20px, scale(24), 28px);
+    height: clamp(20px, scale(24), 28px);
+    border-radius: clamp(20px, scale(24), 28px);
+    background: url("/arrow.svg") no-repeat center $black;
+    background-size: 50%;
+    padding: 0;
+  }
+  &:hover {
+    color: $black;
+  }
+}

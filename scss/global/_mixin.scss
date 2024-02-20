@@ -1,0 +1,12 @@
+@mixin font-size($value) {
+  font-size: ($value / $screen * 100) + vw;
+}
+
+@mixin margin-bottom($value) {
+  font-size: ($value / $screen * 100) + vw;
+}
+
+@function scale($value) {
+  $result: ($value / $screen * 100) + vw;
+  @return $result;
+}

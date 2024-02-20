@@ -1,0 +1,145 @@
+.banner {
+  $self: &;
+
+  padding: scale(100) 0;
+
+  h1 {
+    font-size: clamp(48px, scale(120), 130px);
+    line-height: 1;
+    margin: 0;
+    font-family: $founder;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    span {
+      color: $bright-red;
+    }
+    .c10 {
+      width: scale(665);
+      display: block;
+      margin: scale(20) 0 scale(40);
+    }
+  }
+
+  #{$self}__sub-heading {
+    font-size: scale(32);
+    font-weight: 300;
+    width: scale(750);
+    position: relative;
+    z-index: 1;
+    margin-top: scale(30);
+  }
+  &#{$self}--team {
+    position: relative;
+    z-index: 0;
+    padding: scale(120) 0 scale(100);
+    &:before {
+      content: "";
+      width: 100%;
+      height: 230%;
+      position: absolute;
+      background: url("/circle-image.png") no-repeat;
+      top: -86px;
+      right: 0;
+      background-size: contain;
+      background-position: right top;
+      z-index: 1;
+    }
+  }
+
+  &#{$self}--companies {
+    position: relative;
+    z-index: 1;
+    padding: scale(100) 0;
+
+    #{$self}__sub-heading {
+      font-size: scale(32);
+      font-weight: 300;
+      width: scale(1000);
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: scale(800);
+      position: absolute;
+      background: url("/company-lines.svg") no-repeat top right;
+      top: -40px;
+      right: 0;
+      background-size: 90%;
+
+      z-index: 1;
+    }
+  }
+
+  &#{$self}--process {
+    position: relative;
+    z-index: 1;
+    #{$self}__sub-heading {
+      width: scale(1000);
+    }
+    &:before {
+      content: "";
+
+      height: scale(1020);
+      width: 100%;
+      position: absolute;
+      background: url("/process-lines.svg") no-repeat top right;
+      top: -80px;
+      right: scale(180);
+      background-size: contain;
+
+      z-index: 1;
+    }
+  }
+
+  &#{$self}--contact {
+    position: relative;
+    z-index: 1;
+    #{$self}__sub-heading {
+      width: scale(1000);
+    }
+    &:before {
+      content: "";
+
+      height: 70vh;
+      width: 100%;
+      position: absolute;
+      background: url("/contact-lines.svg") no-repeat top right;
+      top: -180px;
+      right: 0;
+      background-size: 100%;
+      opacity: 0.5;
+
+      z-index: 1;
+    }
+  }
+
+  &#{$self}--careers {
+    position: relative;
+    z-index: 1;
+    #{$self}__sub-heading {
+      width: scale(1000);
+    }
+    &:before {
+      content: "";
+
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: url("/company-lines.svg") no-repeat bottom right;
+      top: -80px;
+      right: 0;
+      background-size: 100%;
+      opacity: 0.5;
+
+      z-index: 1;
+    }
+  }
+
+  @include md {
+  }
+}

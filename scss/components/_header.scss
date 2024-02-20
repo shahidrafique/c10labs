@@ -1,0 +1,31 @@
+.header {
+  background: rgba($gray-lightest, 0.9);
+  // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 84px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  // position: relative;
+  backdrop-filter: blur(20px);
+
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    width: clamp(200px, scale(267), 300px);
+    img {
+      width: 100%;
+    }
+  }
+  &--dark {
+    background: rgba($color: #000000, $alpha: 0.2);
+
+    .nav .nav__item {
+      color: white;
+    }
+  }
+}

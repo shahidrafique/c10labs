@@ -1,0 +1,44 @@
+.member {
+  $self: &;
+  display: flex;
+  flex-direction: column;
+
+  #{$self}__image {
+    img {
+      width: 100%;
+      aspect-ratio: 0.95;
+      object-fit: cover;
+      vertical-align: top;
+      border-radius: 8px 8px 0 0;
+      object-position: top;
+    }
+  }
+  #{$self}__content {
+    padding: clamp(20px, scale(22), 24px);
+    border: 1px solid $gray-light;
+    border-top: 0;
+    border-radius: 0 0 8px 8px;
+    flex: 1;
+    #{$self}__content__name {
+      font-size: clamp(24px, scale(36), 48px);
+      font-family: $founder;
+      font-weight: 500;
+      margin-bottom: scale(10);
+    }
+    #{$self}__content__designation {
+      font-size: clamp(16px, scale(18), 24px);
+      color: $silver-gray;
+      max-width: 80%;
+    }
+  }
+
+  @include md {
+    #{$self}__content {
+      #{$self}__content__designation {
+        font-size: clamp(16px, scale(18), 24px);
+        color: $silver-gray;
+        max-width: 100%;
+      }
+    }
+  }
+}

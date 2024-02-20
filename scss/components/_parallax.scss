@@ -1,0 +1,52 @@
+.parallax {
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: $black;
+  color: $gray-light;
+  position: relative;
+
+  #{$self}__image {
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  h2 {
+    font-size: clamp(48px, scale(60), 80px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: $founder;
+    font-weight: 400;
+    margin: 0;
+  }
+  @include md {
+    h2 {
+      width: 70%;
+    }
+  }
+
+  @include xs {
+    h2 {
+      width: 90%;
+      font-size: 36px;
+    }
+
+    #{$self}__image {
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

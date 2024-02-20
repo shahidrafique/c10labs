@@ -1,0 +1,45 @@
+.testimonials{
+    padding: scale(150) 0;
+}
+
+.testimonial{
+    $self: &;
+    display: flex;
+    width: 100%;
+    gap: scale(150);
+    #{$self}__content,
+    #{$self}__image{
+        flex: 1;
+    }
+
+    #{$self}__image{
+        img{
+            width: 100%;
+        }
+    }
+
+    #{$self}__content{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+        #{$self}__content__text{
+            font-size: scale(36);
+            line-height: 1.3;
+            color: $silver-gray;
+            font-weight: 500;
+        }
+
+        #{$self}__content__name{
+            font-size: scale(32);
+            font-weight: 600;
+        }
+        
+        #{$self}__content__designation{
+            font-size: scale(18);
+            color: $silver-gray;
+        }
+    }
+}
