@@ -1,4 +1,38 @@
+"use client";
+import { useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function Process() {
+  const process = useRef();
+  useGSAP(
+    () => {
+      const process = document.querySelectorAll(".process .process__box");
+      const trigger = document.querySelector(".process");
+      gsap.to(process[2], {
+        yPercent: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: trigger,
+          duration: 1,
+          scrub: true,
+          start: "top 75%",
+        },
+      });
+      gsap.to(process[0], {
+        yPercent: 100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: trigger,
+          duration: 1,
+          scrub: true,
+          start: "top 75%",
+        },
+      });
+    },
+    { scope: process }
+  );
   return (
     <main>
       {/* banner */}

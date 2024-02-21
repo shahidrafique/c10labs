@@ -1,6 +1,42 @@
+"use client";
+import { useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function Team() {
+  const founders = useRef();
+  useGSAP(
+    () => {
+      const members = document.querySelectorAll(
+        ".founder-members .founder-member"
+      );
+      const trigger = document.querySelector(".founder-members");
+      gsap.to(members[0], {
+        yPercent: -60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: trigger,
+          duration: 1,
+          scrub: true,
+          start: "top 75%",
+        },
+      });
+      gsap.to(members[2], {
+        yPercent: 60,
+        ease: "none",
+        scrollTrigger: {
+          trigger: trigger,
+          duration: 1,
+          scrub: true,
+          start: "top 75%",
+        },
+      });
+    },
+    { scope: founders }
+  );
   return (
-    <main>
+    <main ref={founders}>
       {/* Hero Banner */}
       <section className="banner banner--team">
         <div className="container">

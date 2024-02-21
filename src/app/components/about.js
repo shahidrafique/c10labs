@@ -1,6 +1,28 @@
+import { useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 export default function About() {
+  const main = useRef();
+  useGSAP(
+    () => {
+      const box = document.querySelector(".about__image");
+      gsap.to(box, {
+        yPercent: -25,
+        ease: "none",
+        scrollTrigger: {
+          trigger: box,
+          scrub: true,
+          start: "10% bottom",
+          duration: 1,
+        },
+      });
+    },
+    { scope: main }
+  );
   return (
-    <section className="about">
+    <section ref={main} className="about">
       <div className="container">
         <div className="about__content">
           <h2>Creating Iconic AI-First Ventures Beyond Screens</h2>

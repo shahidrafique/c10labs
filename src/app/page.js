@@ -1,3 +1,4 @@
+"use client";
 import Company from "./components/company";
 import Story from "./components/story";
 import Parallax from "./components/parallax";
