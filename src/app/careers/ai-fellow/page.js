@@ -1,10 +1,10 @@
 export default function AiFellow() {
   return (
     <main>
-      <div class="jobs jobs--inner">
-        <div class="container">
-          <div class="job-title">AI Fellow</div>
-          <div class="job-content">
+      <div className="jobs jobs--inner">
+        <div className="container">
+          <div className="job-title">AI Fellow</div>
+          <div className="job-content">
             <p>Job Title: &nbsp;AI Fellow</p>
 
             <p>

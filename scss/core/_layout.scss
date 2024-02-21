@@ -1,5 +1,5 @@
 .container {
-  max-width: scale(1512);
+  max-width: clamp(1200px, scale(1512), 2000px);
   margin: auto;
   width: 100%;
   display: flex;

@@ -3,13 +3,13 @@ export default function Careers() {
     <main>
       {/* Banner */}
 
-      <section class="banner banner--careers">
-        <div class="container">
-          <div class="banner__content">
+      <section className="banner banner--careers">
+        <div className="container">
+          <div className="banner__content">
             <h1>
               Join <span>Us</span>
             </h1>
-            <div class="banner__sub-heading">
+            <div className="banner__sub-heading">
               Ready to shape the future of AI?
             </div>
           </div>
@@ -18,9 +18,9 @@ export default function Careers() {
 
       {/* Careers List */}
 
-      <section class="jobs">
-        <div class="container">
-          <div class="page-content">
+      <section className="jobs">
+        <div className="container">
+          <div className="page-content">
             <p>
               At C10 Labs, we're launching industry-defining AI companies and
               your expertise, whether in research, strategy, entrepreneurship,
@@ -34,7 +34,7 @@ export default function Careers() {
 
           <p>Available Roles</p>
 
-          <div class="list">
+          <div className="list">
             <ul>
               <li>
                 <a href="/careers/ai-fellow">AI Fellow</a>

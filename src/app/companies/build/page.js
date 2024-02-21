@@ -2,15 +2,15 @@ export default function Build() {
   return (
     <main>
       {/* banner */}
-      <section class="banner banner--companies">
-        <div class="container">
-          <div class="banner__content">
+      <section className="banner banner--companies">
+        <div className="container">
+          <div className="banner__content">
             <h1>
               Think Big. Spot-Probe.
               <br />
               <span>Set Course.</span>
             </h1>
-            <div class="banner__sub-heading">
+            <div className="banner__sub-heading">
               Embedded in the world's top AI ecosystem, our ideation meetups
               with experts and industry leaders generate rich venture theses in
               high-growth sectors.
@@ -20,19 +20,19 @@ export default function Build() {
       </section>
 
       {/* Tabs */}
-      <section class="tabs tabs--companies">
-        <div class="container">
-          <a href="/companies" class="tab">
+      <section className="tabs tabs--companies">
+        <div className="container">
+          <a href="/companies" className="tab">
             Cohorts
           </a>
-          <a href="/companies/build" class="tab  tab--active">
+          <a href="/companies/build" className="tab  tab--active">
             Build
           </a>
         </div>
       </section>
 
-      <section class="section-title">
-        <div class="container">
+      <section className="section-title">
+        <div className="container">
           <h2>Project B-1</h2>
         </div>
       </section>

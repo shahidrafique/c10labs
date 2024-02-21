@@ -3,13 +3,13 @@ export default function Contact() {
     <main>
       {/* Banner */}
 
-      <section class="banner banner--contact">
-        <div class="container">
-          <div class="banner__content">
+      <section className="banner banner--contact">
+        <div className="container">
+          <div className="banner__content">
             <h1>
               Contact <span>Us</span>
             </h1>
-            <div class="banner__sub-heading">
+            <div className="banner__sub-heading">
               Embedded in the world's top AI ecosystem, our ideation meetups
               with experts and industry leaders generate rich venture theses in
               high-growth sectors.
@@ -20,8 +20,8 @@ export default function Contact() {
 
       {/* Contact */}
 
-      <section class="contact">
-        <div class="container">HubSpot Form</div>
+      <section className="contact">
+        <div className="container">HubSpot Form</div>
       </section>
     </main>
   );

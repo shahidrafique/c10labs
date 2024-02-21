@@ -64,8 +64,10 @@
   $self: &;
   background-color: white;
   border-radius: 8px;
-
   flex: 1;
+  display: flex;
+  flex-direction: column;
+
   #{$self}__image {
     width: 100%;
     aspect-ratio: 1.8;
@@ -75,10 +77,15 @@
       width: 100%;
       object-fit: cover;
       border-radius: 8px 8px 0 0;
+      vertical-align: top;
     }
   }
   #{$self}__content {
     padding: scale(50);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     #{$self}__content__title {
       font-size: clamp(20px, scale(32), 42px);
       font-weight: 600;

@@ -1,3 +1,4 @@
+import Member from "../../components/member";
 export default function Ventures() {
   return (
     <main>
@@ -39,33 +40,20 @@ export default function Ventures() {
 
       {/* Members */}
 
-      <section class="members">
-        <div class="container">
-          <div class="member">
-            <div class="member__image">
-              <img src="/venture/1.webp" alt="" />
-            </div>
-            <div class="member__content">
-              <div class="member__content__name">David Blundin</div>
-              <div class="member__content__designation">
-                Chairman, EverQuote Link Ventures, 4x Unicorn CEO, MIT
-              </div>
-              <a href="#" class="member__content__linked"></a>
-            </div>
-          </div>
-
-          <div class="member">
-            <div class="member__image">
-              <img src="/venture/3.webp" alt="" />
-            </div>
-            <div class="member__content">
-              <div class="member__content__name">John Harthorne</div>
-              <div class="member__content__designation">
-                Founder & MD, Two Lanterns VC Founder MassChallenge, MIT Sloan
-              </div>
-              <a href="#" class="member__content__linked"></a>
-            </div>
-          </div>
+      <section className="members">
+        <div className="container">
+          <Member
+            title="David Blundin"
+            designation="Chairman, EverQuote Link Ventures, 4x Unicorn CEO, MIT"
+            src="/venture/1.webp"
+            linkedin="linked.com"
+          />
+          <Member
+            title="John Harthorne"
+            designation="Founder & MD, Two Lanterns VC Founder MassChallenge, MIT Sloan"
+            src="/venture/3.webp"
+            linkedin="linked.com"
+          />
         </div>
       </section>
     </main>
