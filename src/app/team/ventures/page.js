@@ -34,7 +34,7 @@ export default function Ventures() {
       {/* Section Title */}
       <section className="section-title">
         <div className="container">
-          <h2>Advisors and Domain Experts</h2>
+          <h2>Venture Council</h2>
         </div>
       </section>
 

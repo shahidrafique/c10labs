@@ -28,4 +28,40 @@
       color: white;
     }
   }
+
+  .menu-button {
+    position: absolute;
+
+    right: 20px;
+    top: 31px;
+    display: none !important;
+    span {
+      width: 27px;
+      height: 3px;
+      background: $black;
+      display: block;
+      margin-bottom: 3px;
+      transition: 0.35s;
+    }
+
+    &.show {
+      span {
+        &:first-child {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          background: $bright-red;
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          background: $bright-red;
+          transform: rotate(-45deg);
+          margin-top: -6px;
+        }
+      }
+    }
+    @include sm {
+      display: block !important;
+    }
+  }
 }

@@ -65,6 +65,10 @@
     span {
       color: $bright-red;
     }
+    @include sm {
+      left: 15px;
+      font-size: 24px;
+    }
   }
 
   @include md {
@@ -79,6 +83,9 @@
 .video__wrapper {
   padding: 56.25% 0 0 0;
   position: relative;
+  @include sm {
+    height: 100%;
+  }
 }
 .video__player {
   position: absolute;

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="header header--dark">
+    <header className="header">
       <div className="container">
         <div className="logo">
           <a href="/">
@@ -41,6 +41,12 @@ export default function Header() {
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </header>
   );

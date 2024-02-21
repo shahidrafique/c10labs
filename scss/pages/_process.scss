@@ -14,7 +14,7 @@
     min-height: scale(300);
 
     #{$self}__box__title {
-      font-size: scale(32);
+      font-size: clamp(24px, scale(32), 40px);
       font-weight: 500;
       font-family: $founder;
       margin-bottom: scale(50);
@@ -61,6 +61,17 @@
         &:before {
           content: "02";
         }
+      }
+    }
+  }
+  @include xs {
+    padding-top: 0;
+    .container {
+      flex-direction: column;
+      gap: 15px;
+      #{$self}__box {
+        margin-top: 0 !important;
+        padding: 25px;
       }
     }
   }

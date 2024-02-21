@@ -25,19 +25,19 @@ export default function Header() {
           <div className="footer__nav">
             <ul>
               <li>
-                <a href="team.html">about</a>
+                <a href="/team">about</a>
               </li>
               <li>
-                <a href="companies.html">companies</a>
+                <a href="/companies">companies</a>
               </li>
               <li>
-                <a href="process.html">Process</a>
+                <a href="/process">Process</a>
               </li>
               <li>
-                <a href="contact.html">contact</a>
+                <a href="/contact">contact</a>
               </li>
               <li>
-                <a href="careers.html">Careers</a>
+                <a href="/careers">Careers</a>
               </li>
             </ul>
           </div>

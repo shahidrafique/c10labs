@@ -78,9 +78,13 @@
     #{$self}__content {
       h2 {
         width: 100%;
+        margin-bottom: 24px;
+        line-height: 1.1;
       }
       p {
         width: 100%;
+        line-height: 1.5;
+        margin-bottom: 0;
       }
       a {
         display: none;
@@ -89,13 +93,15 @@
     #{$self}__image {
       position: static;
       width: 100%;
-      margin: 0;
+      margin: 0 0 30px;
     }
     #{$self}__image__overlay {
       bottom: auto;
       top: 50px;
       img {
-        width: 150vw;
+        height: 300px;
+        object-fit: cover;
+        opacity: 1;
       }
     }
   }
