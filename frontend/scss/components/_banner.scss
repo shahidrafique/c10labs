@@ -16,14 +16,14 @@
       color: $bright-red;
     }
     .c10 {
-      width: scale(665);
+      width: clamp(270px, scale(665), 1000px);
       display: block;
       margin: scale(20) 0 scale(40);
     }
   }
 
   #{$self}__sub-heading {
-    font-size: scale(32);
+    font-size: clamp(16px, scale(32), 40px);
     font-weight: 300;
     width: scale(750);
     position: relative;
@@ -88,14 +88,6 @@
     position: relative;
     z-index: 1;
     padding: scale(100) 0;
-
-    #{$self}__sub-heading {
-      font-size: scale(32);
-      font-weight: 300;
-      width: scale(1000);
-      position: relative;
-      z-index: 1;
-    }
 
     &:before {
       content: "";
@@ -177,5 +169,11 @@
   }
 
   @include md {
+    padding: 50px 0 !important;
+
+    #{$self}__sub-heading {
+      width: 100% !important;
+      margin-top: 20px;
+    }
   }
 }

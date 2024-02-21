@@ -32,13 +32,8 @@
       background: url("/arrow.svg") no-repeat center $bright-red;
     }
   }
-  &--submit {
-    padding: 0 30px;
-    &:hover {
-      background: $black;
-      color: white;
-      border-color: $black;
-    }
+  @include xs {
+    padding: 0 20px 0 60px;
   }
 }
 

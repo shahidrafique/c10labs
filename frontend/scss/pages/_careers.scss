@@ -10,6 +10,9 @@
     line-height: 1.5;
     margin-bottom: scale(50);
     max-width: scale(1280);
+    @include xs {
+      max-width: none;
+    }
   }
 
   .list {
@@ -52,11 +55,14 @@
       }
       .job-title {
         flex: 0.5;
-        font-size: scale(60);
+        font-size: clamp(30px, scale(60), 120px);
         font-weight: bold;
         color: $bright-red;
         position: sticky;
         top: 50px;
+      }
+      @include xs {
+        flex-direction: column;
       }
     }
   }

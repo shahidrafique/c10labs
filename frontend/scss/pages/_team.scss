@@ -6,19 +6,8 @@
 
   align-items: flex-start;
 
-  #{$self}__content {
-    h2 {
-      font-size: scale(32);
-      color: $bright-red;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-    p {
-      font-size: scale(24);
-      float: left;
-      font-weight: 300;
-    }
+  @include sm {
+    flex-direction: column;
   }
 }
 .founder-outline {
@@ -30,6 +19,9 @@
   position: absolute;
   top: scale(250);
   left: scale(180);
+  @include sm {
+    display: none;
+  }
 }
 
 .founder-member {
@@ -63,13 +55,13 @@
 
   #{$self}__name {
     h4 {
-      font-size: scale(32);
+      font-size: clamp(24px, scale(32), 48px);
       margin: scale(16) 0 scale(8);
       font-family: $founder;
       font-weight: 500;
     }
     p {
-      font-size: scale(16);
+      font-size: clamp(16px, scale(16), 24px);
       margin: 0;
       font-weight: 300;
     }
@@ -77,8 +69,8 @@
 
   &:after {
     content: "";
-    width: scale(272);
-    height: scale(350);
+    width: clamp(200px, scale(272), 400px);
+    height: clamp(300px, scale(350), 500px);
     background-color: $bright-red;
     display: inline-block;
     position: absolute;
@@ -111,10 +103,23 @@
       }
     }
   }
+
+  @include sm {
+    margin-bottom: 50px;
+    margin-top: 0 !important;
+    #{$self}__image {
+      .intro {
+        font-size: 16px;
+        padding: 15px;
+      }
+    }
+    #{$self}__name {
+    }
+  }
 }
 
 .founder__content {
-  font-size: scale(36);
+  font-size: clamp(20px, scale(36), 48px);
   margin-bottom: scale(75);
   font-weight: 400;
   a {
@@ -123,6 +128,8 @@
     &:hover {
       color: $bright-red;
     }
+  }
+  @include sm {
   }
 }
 
@@ -138,7 +145,7 @@
     gap: scale(20);
     li {
       a {
-        font-size: scale(30);
+        font-size: clamp(20px, scale(30), 36px);
         font-family: $founder;
         display: inline-block;
         &:after {
@@ -155,6 +162,15 @@
           }
         }
       }
+    }
+  }
+  @include sm {
+    justify-content: flex-start;
+    background: $gray-lightest;
+    padding: 15px;
+    margin-top: 0;
+    ul {
+      gap: 15px;
     }
   }
 }
