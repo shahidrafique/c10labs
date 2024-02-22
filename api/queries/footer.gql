@@ -1,0 +1,39 @@
+query {
+  footer {
+    data {
+      attributes {
+        menus {
+          data {
+            attributes {
+              links {
+                href
+                title
+              }
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        background {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        address
+        newsLetter {
+          placeholder
+          buttonText
+          title
+          subtitle
+        }
+      }
+    }
+  }
+}

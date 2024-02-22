@@ -1,0 +1,31 @@
+query {
+  processPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        processes {
+          data {
+            attributes {
+              title 
+              content
+            }
+          }
+        }
+      }
+    }
+  }
+}

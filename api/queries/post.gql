@@ -1,0 +1,11 @@
+query {
+  posts(filters:{href:{eq:"%s"}}) {
+    data {
+      attributes {
+        title
+        href
+        content
+      }
+    }
+  }
+}

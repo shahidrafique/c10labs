@@ -1,0 +1,38 @@
+query {
+  contactPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        form {
+          data {
+            attributes {
+              input {
+                label
+                type
+              }
+              submitButton {
+                text
+                href
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
