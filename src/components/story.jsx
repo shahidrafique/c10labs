@@ -1,8 +1,11 @@
+import Link from "next/link";
+import StrapiImage from "./StrapiImage";
+
 export default function Story({ title, src, type, link, inner = false }) {
   return (
     <article className={inner ? "story story--inner" : "story"}>
       <div className="story__image">
-        <img src={src} alt={title} />
+        <StrapiImage src={src} alt={title} />
       </div>
       <div className="story__content">
         <div className="upper">
@@ -10,9 +13,9 @@ export default function Story({ title, src, type, link, inner = false }) {
           <h3 className="story__content__title">{title}</h3>
         </div>
         <div className="story__content__more">
-          <a href={link} target="_blank" className="button__more">
+          <Link href={link} target="_blank" className="button__more">
             Register
-          </a>
+          </Link>
         </div>
       </div>
     </article>
