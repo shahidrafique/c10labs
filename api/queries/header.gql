@@ -1,0 +1,25 @@
+query {
+  header {
+    data {
+      attributes {
+        menu {
+          data {
+            attributes {
+              links {
+                href
+                title
+              }
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

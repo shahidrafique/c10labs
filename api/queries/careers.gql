@@ -1,0 +1,38 @@
+query {
+  careersPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        
+        menu {
+          data {
+            attributes {
+              links {
+                title
+                href
+              }
+            }
+          }
+        }
+        
+        menuTitle
+      }
+      
+      
+    }
+  }
+}

@@ -1,0 +1,129 @@
+query home {
+    index {
+        data {
+            attributes {
+                mainBanner {
+                    data {
+                        attributes {
+                            title
+                            video {
+                                data {
+                                    attributes {
+                                        url
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                about {
+                    data {
+                        attributes {
+                            title
+                            content
+                            image {
+                                data {
+                                    attributes {
+                                        url
+                                    }
+                                }
+                            }
+                            background {
+                                data {
+                                    attributes {
+                                        url
+                                    }
+                                }
+                            }
+                            button {
+                                text
+                                href
+                            }
+                        }
+                    }
+                }
+                companySection {
+                    data {
+                        attributes {
+                        title
+                        button {
+                            text
+                            href
+                        }
+                        companies {
+                            data {
+                            attributes {
+                                name
+                                href
+                                image {
+                                    data {
+                                        attributes {
+                                            url
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        }
+                    }
+                    }
+                banner {
+                    data {
+                        attributes {
+                            title
+                            background {
+                                data {
+                                    attributes {
+                                        url
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                storySection {
+                    data {
+                        attributes {
+                            title
+                            description
+                            moreButton {
+                                text
+                                href
+                            }
+                            stories(pagination:{limit:2}) {
+                                data {
+                                    attributes {
+                                        title
+                                        image {
+                                            data {
+                                                attributes {
+                                                    url
+                                                }
+                                            }
+                                        }
+                                        href
+                                        type
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                sponsor {
+                    data {
+                      attributes {
+                        logos {
+                          data {
+                            attributes {
+                              url
+                            }
+                          }
+                        }
+                      }
+                    }
+                }
+            }
+        }
+    }
+}

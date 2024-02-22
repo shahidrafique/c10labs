@@ -1,0 +1,56 @@
+query {
+  venturesPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        menu {
+          data {
+            attributes {
+              links {
+                title
+                href
+              }
+            }
+          }
+        }
+        peopleSection {
+          data {
+            attributes {
+              title
+              people {
+                data {
+                  attributes {
+                    name
+                    education
+                    designation
+                    image {
+                      data {
+                        attributes {
+                          url
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

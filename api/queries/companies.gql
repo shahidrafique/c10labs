@@ -1,0 +1,59 @@
+query {
+  companyPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        menu {
+          data {
+            attributes {
+              links {
+								href
+                title
+              }
+            }
+          }
+        }
+        companySections {
+          data {
+            attributes {
+              title
+              button {
+                text
+                href
+              }
+              companies {
+                data {
+                  attributes {
+                    name
+                    href
+                    image {
+                      data {
+                        attributes {
+                          url
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

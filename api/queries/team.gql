@@ -1,0 +1,50 @@
+query team {
+  ourTeam {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        founders {
+          data {
+            attributes {
+              name
+              designation
+              image {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+              about
+            }
+          }
+        }
+        menu {
+          data {
+            attributes {
+              links {
+                href
+                title
+              }
+            }
+          }
+        }
+        content
+      }
+    }
+  }
+}

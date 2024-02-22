@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.44",
+    "graphql-tag": "^2.12.6",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
     "sass": "^1.71.0",
     "yarn": "^1.22.21"
   },
