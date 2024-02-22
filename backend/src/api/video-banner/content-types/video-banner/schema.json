@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_banners",
+  "info": {
+    "singularName": "video-banner",
+    "pluralName": "video-banners",
+    "displayName": "Video Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
