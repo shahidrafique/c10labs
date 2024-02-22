@@ -1,13 +1,13 @@
-export default function Banner({ title = "", content = "", background }) {
+export default function Banner({
+  title = "",
+  content = "",
+  background,
+  cssClass,
+}) {
   const [titleA, titleB] = title.split(" - ");
 
   return (
-    <section
-      className="banner"
-      style={{
-        background: `url(${process.env.STRAPI_URL}${background?.url})`,
-      }}
-    >
+    <section className={`banner ${cssClass}`}>
       <div className="container">
         <div className="banner__content">
           <h1>

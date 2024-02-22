@@ -5,6 +5,9 @@ import Link from "next/link";
 
 export default async function Build() {
   const props = await getBuildPage();
+
+  console.log(props);
+
   const {
     banner,
     menu: { links },

@@ -9,9 +9,7 @@ export default async function StoriesPage() {
   return (
     <main>
       <Banner {...banner} />
-      <section className="stories stories--inner-page">
-        <Stories stories={stories} inner />
-      </section>
+      <Stories stories={stories} inner />
     </main>
   );
 }

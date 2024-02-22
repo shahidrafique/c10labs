@@ -17,7 +17,7 @@ export default function About({
           <div>
             <Markdown>{content}</Markdown>
           </div>
-          <Link href={button.href} className="button">
+          <Link href={button.href ?? ""} className="button">
             {button.text}
           </Link>
         </div>

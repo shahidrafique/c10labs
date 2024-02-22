@@ -5,6 +5,7 @@ query team {
         banner {
           data {
             attributes {
+              cssClass
               title
               content
               background {

@@ -22,7 +22,7 @@ export default async function Advisors() {
 
       <section className="tabs">
         <div className="container">
-          {links.map(({ title, href }) => (
+          {links.map(({ title, href = "" }) => (
             <Link
               href={href}
               className={`tab ${

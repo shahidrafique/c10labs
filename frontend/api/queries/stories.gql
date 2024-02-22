@@ -5,6 +5,7 @@ query {
         banner {
           data {
             attributes {
+              cssClass
               title
               content
               background {
@@ -17,8 +18,8 @@ query {
             }
           }
         }
-        
-        stories(pagination: {limit: 10}) {
+
+        stories(pagination: { limit: 10 }) {
           data {
             attributes {
               title

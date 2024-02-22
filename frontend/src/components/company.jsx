@@ -1,7 +1,7 @@
 import Link from "next/link";
 import StrapiImage from "./StrapiImage";
 
-export default function Company({ src, title, link, inner = false }) {
+export default function Company({ src, title, link = "", inner = false }) {
   return (
     <article className={inner ? "company company--inner" : "company"}>
       <div className="company__image">

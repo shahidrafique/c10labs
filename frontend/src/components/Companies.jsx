@@ -24,7 +24,7 @@ export default function Companies({
           ))}
         </section>
         {button ? (
-          <Link href={button.href} className="button">
+          <Link href={button.hre ?? ""} className="button">
             {button.text}
           </Link>
         ) : null}

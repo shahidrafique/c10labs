@@ -6,6 +6,8 @@ export default async function Process() {
   const props = await getProcessPage();
   const { banner, processes } = props;
 
+  console.log(banner);
+
   return (
     <main>
       <Banner {...banner} />

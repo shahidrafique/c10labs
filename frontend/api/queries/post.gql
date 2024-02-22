@@ -1,5 +1,5 @@
 query {
-  posts(filters:{href:{eq:"%s"}}) {
+  posts(filters: { href: { eq: "%s" } }) {
     data {
       attributes {
         title

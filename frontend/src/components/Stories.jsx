@@ -9,7 +9,7 @@ export default function Stories({
   inner = false,
 }) {
   return (
-    <section className="stories">
+    <section className={`stories ${inner ? "stories--inner-page" : ""}`}>
       {title ? (
         <div className="container">
           <div className="stories__header">

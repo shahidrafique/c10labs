@@ -1,5 +1,5 @@
 query {
-  advisorsPage {
+  buildPage {
     data {
       attributes {
         banner {
@@ -22,22 +22,25 @@ query {
           data {
             attributes {
               links {
-                title
                 href
+                title
               }
             }
           }
         }
-        peopleSection {
+        companySections {
           data {
             attributes {
               title
-              people {
+              button {
+                text
+                href
+              }
+              companies {
                 data {
                   attributes {
                     name
-                    education
-                    designation
+                    href
                     image {
                       data {
                         attributes {

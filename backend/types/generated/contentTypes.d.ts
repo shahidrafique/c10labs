@@ -879,6 +879,7 @@ export interface ApiBannerBanner extends Schema.CollectionType {
     background: Attribute.Media;
     centered: Attribute.Boolean;
     content: Attribute.RichText;
+    cssClass: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -897,39 +898,44 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
 }
 
-export interface ApiBuildBuild extends Schema.SingleType {
-  collectionName: 'builds';
+export interface ApiBuildPageBuildPage extends Schema.SingleType {
+  collectionName: 'build_pages';
   info: {
-    singularName: 'build';
-    pluralName: 'builds';
-    displayName: 'Build';
+    singularName: 'build-page';
+    pluralName: 'build-pages';
+    displayName: 'buildPage';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     banner: Attribute.Relation<
-      'api::build.build',
+      'api::build-page.build-page',
       'oneToOne',
       'api::banner.banner'
     >;
+    menu: Attribute.Relation<
+      'api::build-page.build-page',
+      'oneToOne',
+      'api::menu.menu'
+    >;
     companySections: Attribute.Relation<
-      'api::build.build',
+      'api::build-page.build-page',
       'oneToMany',
       'api::company-section.company-section'
     >;
-    menu: Attribute.Relation<'api::build.build', 'oneToOne', 'api::menu.menu'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::build.build',
+      'api::build-page.build-page',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::build.build',
+      'api::build-page.build-page',
       'oneToOne',
       'admin::user'
     > &
@@ -1823,7 +1829,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::advisors-page.advisors-page': ApiAdvisorsPageAdvisorsPage;
       'api::banner.banner': ApiBannerBanner;
-      'api::build.build': ApiBuildBuild;
+      'api::build-page.build-page': ApiBuildPageBuildPage;
       'api::careers-page.careers-page': ApiCareersPageCareersPage;
       'api::company.company': ApiCompanyCompany;
       'api::company-page.company-page': ApiCompanyPageCompanyPage;

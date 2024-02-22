@@ -5,6 +5,7 @@ query {
         banner {
           data {
             attributes {
+              cssClass
               title
               content
               background {

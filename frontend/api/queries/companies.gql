@@ -5,6 +5,7 @@ query {
         banner {
           data {
             attributes {
+              cssClass
               title
               content
               background {
@@ -21,7 +22,7 @@ query {
           data {
             attributes {
               links {
-								href
+                href
                 title
               }
             }

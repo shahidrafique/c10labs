@@ -1,15 +1,12 @@
 import StrapiImage from "./StrapiImage";
 
-export default function Parallax() {
+export default function Parallax({ title, background }) {
   return (
     <section className="parallax">
       <div className="parallax__image">
-        <StrapiImage src="/parallax-bg.jpeg" alt="parallax" />
+        <StrapiImage src={background?.url} alt="parallax" />
       </div>
-      <h2>
-        "C10 Labs founders co-taught the pioneering class "AI for Impact:
-        Venture Studio."
-      </h2>
+      <h2>{title}</h2>
     </section>
   );
 }
