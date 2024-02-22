@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "advisors_pages",
+  "info": {
+    "singularName": "advisors-page",
+    "pluralName": "advisors-pages",
+    "displayName": "Advisors Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::banner.banner"
+    },
+    "peopleSection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::people-section.people-section"
+    },
+    "menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::menu.menu"
+    }
+  }
+}

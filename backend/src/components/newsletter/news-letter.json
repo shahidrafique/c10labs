@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_newsletter_news_letters",
+  "info": {
+    "displayName": "News Letter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    }
+  }
+}

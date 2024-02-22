@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "story_sections",
+  "info": {
+    "singularName": "story-section",
+    "pluralName": "story-sections",
+    "displayName": "Story Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "moreButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "stories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::story.story"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

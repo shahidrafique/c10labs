@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "process_pages",
+  "info": {
+    "singularName": "process-page",
+    "pluralName": "process-pages",
+    "displayName": "Process Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::banner.banner"
+    },
+    "processes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process.process"
+    }
+  }
+}
