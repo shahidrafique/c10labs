@@ -6,7 +6,6 @@ query home {
           data {
             attributes {
               title
-              cssClass
               video {
                 data {
                   attributes {
