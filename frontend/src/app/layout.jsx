@@ -1,5 +1,4 @@
 import "../../scss/styles.scss";
-// import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -9,10 +8,6 @@ export const metadata = {
   description: "AI VENTURE STUDIO",
 };
 
-// const lenis = useLenis(({ scroll }) => {
-//   // called every scroll
-// });
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -20,6 +15,10 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <script src="https://unpkg.co/gsap@3/dist/gsap.min.js" />
+        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" />
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js" />
+        <script src="/lenis-init.js" />
       </body>
     </html>
   );

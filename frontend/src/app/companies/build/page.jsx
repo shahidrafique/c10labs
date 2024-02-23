@@ -6,8 +6,6 @@ import Link from "next/link";
 export default async function Build() {
   const props = await getBuildPage();
 
-  console.log(props);
-
   const {
     banner,
     menu: { links },
@@ -22,7 +20,12 @@ export default async function Build() {
       <section className="tabs tabs--companies">
         <div className="container">
           {links.map(({ title, href = "" }) => (
-            <Link href={href} className="tab tab--active">
+            <Link
+              href={href}
+              className={`tab ${
+                href === "/companies/build" ? "tab--active" : ""
+              }`}
+            >
               {title}
             </Link>
           ))}

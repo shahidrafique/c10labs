@@ -22,9 +22,9 @@
       "relation": "oneToOne",
       "target": "api::about.about"
     },
-    "sponsor": {
+    "sponsors": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::sponsor.sponsor"
     },
     "banner": {

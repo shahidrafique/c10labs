@@ -9,11 +9,11 @@
 
   #{$self}__content {
     flex: 1;
-    margin: scale(178) 0;
+    margin: scale(150) 0 scale(100);
     position: relative;
     z-index: 1;
     h2 {
-      font-size: clamp(48px, scale(120), 140px);
+      font-size: clamp(48px, scale(120), 170px);
       font-family: $founder;
       font-weight: 500;
       margin: 0;
@@ -34,9 +34,8 @@
     }
     p {
       margin-top: 0;
-      font-size: scale(24);
       font-size: clamp(18px, scale(24), 30px);
-      line-height: 1.2;
+      line-height: 1.5;
       width: 32%;
       margin-bottom: 30px;
     }

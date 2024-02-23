@@ -7,9 +7,10 @@
   position: relative;
   align-items: center;
   height: clamp(48px, scale(55), 70px);
-  border: 1px solid $gray-light;
+  border: 2px solid $gray-light;
   color: $black;
   display: inline-flex;
+  transition: 0.35s;
   &:before {
     content: "";
     display: block;
@@ -18,14 +19,14 @@
     border-radius: 60px;
     background: url("/arrow.svg") no-repeat center $black;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -1px;
+    top: -1px;
     padding: 0;
+    transition: 0.35s;
   }
 
   &:hover {
-    color: $bright-red;
-    border: 1px solid $bright-red;
+    border: 2px solid $bright-red;
     &:before {
       content: "";
       background: url("/arrow.svg") no-repeat center $bright-red;

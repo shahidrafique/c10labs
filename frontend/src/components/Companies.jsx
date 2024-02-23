@@ -23,11 +23,14 @@ export default function Companies({
             <Company key={name} title={name} src={image?.url} link={href} />
           ))}
         </section>
-        {button ? (
+        {/* {button ? (
           <Link href={button.hre ?? ""} className="button">
             {button.text}
           </Link>
-        ) : null}
+        ) : null} */}
+        <Link href="/companies" className="button">
+          {button.text}
+        </Link>
       </section>
     </section>
   );

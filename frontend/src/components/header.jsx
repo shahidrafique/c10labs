@@ -7,11 +7,11 @@ export default async function Header() {
   const { menu: { links = [], image } = {} } = props ?? {};
 
   return (
-    <header className="header header--dark">
+    <header className="header">
       <div className="container">
         <div className="logo">
           <Link href="/">
-            <StrapiImage src={image?.url} alt="Vercel Logo" />
+            <StrapiImage src={image?.url} alt="C10 Labs" />
           </Link>
         </div>
         <ul className="nav">

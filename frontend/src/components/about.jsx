@@ -1,6 +1,8 @@
+"use client";
 import Markdown from "react-markdown";
 import StrapiImage from "./StrapiImage";
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function About({
   title = "",
@@ -9,6 +11,19 @@ export default function About({
   image,
   backgroud,
 }) {
+  useEffect(() => {
+    gsap.to(".about__image", {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about",
+        duration: 1,
+        scrub: true,
+        start: "top 100%",
+      },
+    });
+  });
+
   return (
     <section className="about">
       <div className="container">
@@ -26,7 +41,7 @@ export default function About({
         </div>
       </div>
       <div className="about__image__overlay">
-        <StrapiImage src={backgroud?.url} alt="" />
+        <img src="/about-lines.svg" alt="" />
       </div>
     </section>
   );

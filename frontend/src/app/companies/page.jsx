@@ -19,7 +19,10 @@ export default async function Companies() {
       <section className="tabs tabs--companies">
         <div className="container">
           {links.map(({ title, href = "" }) => (
-            <Link href={href} className="tab tab--active">
+            <Link
+              href={href}
+              className={`tab ${href === "/companies" ? "tab--active" : ""}`}
+            >
               {title}
             </Link>
           ))}

@@ -110,7 +110,7 @@ query home {
             }
           }
         }
-        sponsor {
+        sponsors {
           data {
             attributes {
               logos {

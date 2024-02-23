@@ -8,7 +8,7 @@ export default function VideoBanner({ video = "", title = "" }) {
         <div className="hero__image">
           <div className="video__wrapper">
             <iframe
-              src={video}
+              src="https://player.vimeo.com/video/913483537?h=8fe76490dc&autoplay=1&loop=1&color=ffffff&title=0&byline=0&portrait=0&background=1&muted=1"
               frameborder="0"
               allow="autoplay; fullscreen;"
               allowfullscreen
@@ -31,7 +31,7 @@ export default function VideoBanner({ video = "", title = "" }) {
         target="_blank"
         className="cohort"
       >
-        Join <span>C10</span>&apos;s Spring Cohort
+        Join <span>C10</span>&apos;s Next Cohort
       </a>
     </section>
   );

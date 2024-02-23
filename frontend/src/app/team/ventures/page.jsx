@@ -50,7 +50,7 @@ export default async function Advisors() {
           {peopleSection.people?.map(
             ({ name, education, designation, linkedin, image }) => (
               <Member
-                title={name + ", " + education}
+                title={education ? `${name}, ${education}` : name}
                 designation={designation}
                 src={image?.url}
                 linkedin={linkedin}
