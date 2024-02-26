@@ -21,7 +21,7 @@ export default function Stories({
 
       <div className="container">
         <section className="stories__holder">
-          {stories.map(({ title, image, type, href = "" }) => (
+          {stories.map(({ title, image, type, eventDate, href = "" }) => (
             <Story
               key={title}
               title={title}
@@ -29,6 +29,7 @@ export default function Stories({
               link={href}
               type={type}
               inner={inner}
+              eventDate={eventDate}
             />
           ))}
         </section>

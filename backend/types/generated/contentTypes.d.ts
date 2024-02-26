@@ -1675,6 +1675,7 @@ export interface ApiStoryStory extends Schema.CollectionType {
     image: Attribute.Media;
     href: Attribute.String;
     type: Attribute.Enumeration<['event', 'press', 'video']>;
+    eventDate: Attribute.DateTime;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

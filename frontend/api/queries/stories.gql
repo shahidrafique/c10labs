@@ -25,6 +25,7 @@ query {
               title
               type
               href
+              eventDate
               image {
                 data {
                   attributes {

@@ -1,8 +1,8 @@
 import Banner from "@/components/Banner";
 import { getAdvisorsPage } from "../../../../api/controllers/advisorsPageController";
 import Member from "../../../components/member";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import Link from "next/link";
+// import { usePathname } from "next/navigation";
 
 export default async function Advisors() {
   const props = await getAdvisorsPage();
@@ -20,7 +20,7 @@ export default async function Advisors() {
 
       {/* Tabs */}
 
-      <section className="tabs">
+      {/* <section className="tabs">
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
@@ -33,7 +33,7 @@ export default async function Advisors() {
             </Link>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Section Title */}
 

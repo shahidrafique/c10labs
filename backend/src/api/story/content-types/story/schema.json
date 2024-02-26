@@ -36,6 +36,9 @@
         "press",
         "video"
       ]
+    },
+    "eventDate": {
+      "type": "datetime"
     }
   }
 }
