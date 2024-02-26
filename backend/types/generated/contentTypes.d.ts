@@ -898,6 +898,46 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
 }
 
+export interface ApiBuildBuild extends Schema.SingleType {
+  collectionName: 'builds';
+  info: {
+    singularName: 'build';
+    pluralName: 'builds';
+    displayName: 'Build';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'api::banner.banner'
+    >;
+    companySections: Attribute.Relation<
+      'api::build.build',
+      'oneToMany',
+      'api::company-section.company-section'
+    >;
+    menu: Attribute.Relation<'api::build.build', 'oneToOne', 'api::menu.menu'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBuildPageBuildPage extends Schema.SingleType {
   collectionName: 'build_pages';
   info: {
@@ -1830,6 +1870,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::advisors-page.advisors-page': ApiAdvisorsPageAdvisorsPage;
       'api::banner.banner': ApiBannerBanner;
+      'api::build.build': ApiBuildBuild;
       'api::build-page.build-page': ApiBuildPageBuildPage;
       'api::careers-page.careers-page': ApiCareersPageCareersPage;
       'api::company.company': ApiCompanyCompany;

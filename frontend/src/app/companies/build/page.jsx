@@ -2,15 +2,16 @@ import Banner from "@/components/Banner";
 import Company from "../../../components/company";
 import { getBuildPage } from "../../../../api/controllers/buildPageController";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default async function Build() {
   const props = await getBuildPage();
 
   const {
-    banner,
-    menu: { links },
-    companySections,
-  } = props;
+    banner = {},
+    menu: { links = [] } = {},
+    companySections = [],
+  } = props ?? {};
 
   return (
     <main>
@@ -21,6 +22,7 @@ export default async function Build() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
+              key={href}
               href={href}
               className={`tab ${
                 href === "/companies/build" ? "tab--active" : ""
@@ -33,7 +35,7 @@ export default async function Build() {
       </section>
 
       {companySections.map(({ title, companies }) => (
-        <>
+        <Fragment key={title}>
           <section className="section-title">
             <div className="container">
               <h2>{title}</h2>
@@ -44,12 +46,18 @@ export default async function Build() {
             <div className="container">
               <div className="companies__container">
                 {companies.map(({ name, image, href = "" }) => (
-                  <Company title={name} src={image?.url} link={href} inner />
+                  <Company
+                    key={name}
+                    title={name}
+                    src={image?.url}
+                    link={href}
+                    inner
+                  />
                 ))}
               </div>
             </div>
           </section>
-        </>
+        </Fragment>
       ))}
     </main>
   );

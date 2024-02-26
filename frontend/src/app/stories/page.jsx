@@ -4,7 +4,7 @@ import Stories from "@/components/Stories";
 
 export default async function StoriesPage() {
   const props = await getStoriesPage();
-  const { banner, stories } = props;
+  const { banner = {}, stories = [] } = props ?? {};
 
   return (
     <main>

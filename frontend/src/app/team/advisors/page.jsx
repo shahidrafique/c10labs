@@ -8,10 +8,10 @@ export default async function Advisors() {
   const props = await getAdvisorsPage();
 
   const {
-    banner,
-    menu: { links },
-    peopleSection,
-  } = props;
+    banner = {},
+    menu: { links = [] } = {},
+    peopleSection = {},
+  } = props ?? {};
 
   return (
     <main>
@@ -24,6 +24,7 @@ export default async function Advisors() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
+              key={href}
               href={href}
               className={`tab ${
                 href === "/team/advisors" ? "tab--active" : ""
@@ -51,6 +52,7 @@ export default async function Advisors() {
           {peopleSection.people.map(
             ({ name, education, designation, linkedin, image }) => (
               <Member
+                key={name}
                 title={education ? `${name}, ${education}` : name}
                 designation={designation}
                 src={image?.url}
