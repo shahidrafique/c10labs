@@ -5,7 +5,6 @@ import VideoBanner from "@/components/VideoBanner";
 import Companies from "@/components/Companies";
 import Stories from "@/components/Stories";
 import { getHomePage } from "../../api/controllers/homePageController";
-import Script from "next/script";
 
 export default async function Home() {
   const props = await getHomePage();
