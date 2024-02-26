@@ -6,7 +6,7 @@ export default function Sponsors({ logos }) {
       <div className="logos-container">
         <ul>
           {logos.map(({ logos: [{ url }] }) => (
-            <li>
+            <li key={url}>
               <StrapiImage src={url} alt="" />
             </li>
           ))}
