@@ -9,20 +9,29 @@ export default async function Header() {
   return (
     <footer className="footer" style={{ background: background?.url }}>
       <div className="container">
-        <div className="footer-left">
+        <div className="footer__left">
           <div className="footer__logo">
             <StrapiImage src={menus[0].image?.url} alt="Vercel Logo" />
           </div>
           <div className="social-media">
             <ul>
               <li>
-                <Link href="#"></Link>
+                <Link
+                  href="https://www.linkedin.com/company/c10labs/"
+                  target="_blank"
+                >
+                  <img src="/linked-in.png" alt="Linked In" />
+                </Link>
               </li>
               <li>
-                <Link href="#"></Link>
+                <Link href="https://twitter.com/c10labs" target="_blank">
+                  <img src="/twitter.png" alt="Twitter" />
+                </Link>
               </li>
               <li>
-                <Link href="#"></Link>
+                <Link href="https://medium.com/c10labs" target="_blank">
+                  <img src="/medium.png" alt="Medium" />
+                </Link>
               </li>
             </ul>
           </div>

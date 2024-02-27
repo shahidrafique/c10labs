@@ -13,13 +13,31 @@
     z-index: 1;
   }
 
-  #{$self}__logo {
+  #{$self}__left {
     display: flex;
-    width: 200px;
+    align-items: center;
+    gap: 30px;
+    #{$self}__logo {
+      display: flex;
+      width: 250px;
 
-    img {
-      height: auto;
-      width: auto;
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .social-media {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        li {
+          img {
+            vertical-align: top;
+          }
+        }
+      }
     }
   }
 
