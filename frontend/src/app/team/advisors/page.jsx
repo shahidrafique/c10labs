@@ -57,7 +57,6 @@ export default async function Advisors() {
                 designation={designation}
                 src={image?.url}
                 linkedin={linkedin}
-                key={image}
               />
             )
           )}

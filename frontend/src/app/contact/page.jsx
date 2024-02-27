@@ -1,6 +1,5 @@
 import Banner from "@/components/Banner";
 import { getContactPage } from "../../../api/controllers/contactPageController";
-import Script from "next/script";
 
 export default async function Contact() {
   const props = await getContactPage();
@@ -11,16 +10,9 @@ export default async function Contact() {
       <Banner {...banner} />
       <section className="contact">
         <div className="container">
-          {/* <Script
-            charset="utf-8"
-            type="text/javascript"
-            src="//js.hsforms.net/forms/embed/v2.js"
-          />
-          <Script src="/contact-form.js" /> */}
-
-          <section className="contact-form">
+          {/* <section className="contact-form">
             {form.input.map(({ label, type }) => (
-              <div className="input-wrapper">
+              <div className="input-wrapper" key={label}>
                 <label>{label}</label> <input type={type} />
               </div>
             ))}
@@ -32,7 +24,7 @@ export default async function Contact() {
               className="button button--submit"
               label={form.submitButton.text}
             />
-          </section>
+          </section> */}
         </div>
       </section>
     </main>

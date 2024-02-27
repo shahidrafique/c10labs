@@ -23,7 +23,7 @@ export default async function Header() {
             </li>
           ))}
         </ul>
-        <div class="menu-button">
+        <div className="menu-button">
           <span></span>
           <span></span>
           <span></span>

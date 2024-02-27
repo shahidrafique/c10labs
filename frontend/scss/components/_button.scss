@@ -8,9 +8,11 @@
   align-items: center;
   height: clamp(48px, scale(55), 70px);
   border: 2px solid $gray-light;
+
   color: $black;
   display: inline-flex;
   transition: 0.35s;
+
   &:before {
     content: "";
     display: block;
@@ -34,6 +36,19 @@
   }
   @include xs {
     padding: 0 20px 0 60px;
+  }
+
+  &#{$self}--submit {
+    padding: 0 60px;
+    cursor: pointer;
+    &:hover {
+      background-color: $black;
+      color: $white;
+      border-color: $black;
+    }
+    &::before {
+      display: none !important;
+    }
   }
 }
 
