@@ -2,7 +2,7 @@ import "../../scss/styles.scss";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
-import "./setupAnimations";
+import SetupAnimations from "./setupAnimations";
 
 export const metadata = {
   title: "C10 Labs",
@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <SetupAnimations />
       </body>
     </html>
   );
