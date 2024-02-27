@@ -1,12 +1,39 @@
-.contact{
-    .container{
-        margin-bottom: 50px;
-        width: 100%;
-        .hbspt-form{
-            width: 75%;
-            input{
-                border: 1px solid red;
-            }
+.contact {
+  position: relative;
+  z-index: 2;
+  .container {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 75%;
+    .input-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      label {
+        font-size: 14px;
+        color: $black;
+      }
+      input,
+      textarea {
+        height: 50px;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: clamp(16px, scale(20), 24px);
+        outline: 0;
+        border: 2px solid $silver-gray;
+        &:focus {
+          background: $gray-lightest;
+          border-color: $black;
         }
+      }
+      textarea {
+        height: 200px;
+        font-family: inherit;
+      }
     }
+  }
 }

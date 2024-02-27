@@ -48,6 +48,42 @@
     }
   }
 
+  &#{$self}--hero {
+    position: relative;
+    z-index: 0;
+    padding: scale(120) 0 scale(100);
+    background: white;
+    color: $black;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      background: url("/company-lines.svg") no-repeat;
+      top: 0;
+      right: 0;
+      background-size: cover;
+      background-position: left top;
+      z-index: 1;
+    }
+    .hero__image {
+      &:after {
+        display: none;
+      }
+    }
+    .hero__content {
+      h1 {
+        font-weight: 500;
+        font-family: $founder;
+      }
+    }
+    .cohort {
+      z-index: 99;
+      color: $black;
+    }
+  }
+
   &#{$self}--companies {
     position: relative;
     z-index: 1;

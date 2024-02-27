@@ -20,6 +20,7 @@ export default async function Companies() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
+              key={title}
               href={href}
               className={`tab ${href === "/companies" ? "tab--active" : ""}`}
             >
@@ -31,7 +32,7 @@ export default async function Companies() {
 
       {companySections.map(({ title, companies }) => (
         <>
-          <section className="section-title">
+          <section className="section-title" key={title}>
             <div className="container">
               <h2>{title}</h2>
             </div>
@@ -41,7 +42,13 @@ export default async function Companies() {
             <div className="container">
               <div className="companies__container">
                 {companies.map(({ name, image, href = "" }) => (
-                  <Company title={name} src={image?.url} link={href} inner />
+                  <Company
+                    key={name}
+                    title={name}
+                    src={image?.url}
+                    link={href}
+                    inner
+                  />
                 ))}
               </div>
             </div>

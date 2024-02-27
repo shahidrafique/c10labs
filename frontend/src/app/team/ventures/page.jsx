@@ -23,6 +23,7 @@ export default async function Advisors() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
+              key={title}
               href={href}
               className={`tab ${
                 href === "/team/ventures" ? "tab--active" : ""
@@ -54,6 +55,7 @@ export default async function Advisors() {
                 designation={designation}
                 src={image?.url}
                 linkedin={linkedin}
+                key={name}
               />
             )
           )}

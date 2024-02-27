@@ -95,6 +95,7 @@ query home {
                 data {
                   attributes {
                     title
+                    eventDate
                     image {
                       data {
                         attributes {

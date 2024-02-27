@@ -31,7 +31,7 @@ export default async function Header() {
           <div className="footer__nav">
             <ul>
               {menus[0].links.map(({ title, href = "" }) => (
-                <li>
+                <li key={title}>
                   <Link href={href}>{title}</Link>
                 </li>
               ))}
@@ -46,6 +46,12 @@ export default async function Header() {
             <p>{newsLetter.subtitle}</p>
           </div>
           <div className="subscribe__input">
+            {/* <script
+              charset="utf-8"
+              type="text/javascript"
+              src="//js.hsforms.net/forms/embed/v2.js"
+            ></script> */}
+            {/* <script src="/contact-form.js"></script> */}
             <input type="text" placeholder={newsLetter.placeholder} />
             <button>{newsLetter.buttonText}</button>
           </div>
@@ -54,7 +60,9 @@ export default async function Header() {
       <div className="container copy">
         <div className="left">
           {menus[1]?.links.map(({ title, href = "" }) => (
-            <Link href={href}>{title}</Link>
+            <Link href={href} key={href}>
+              {title}
+            </Link>
           ))}
         </div>
         <div className="right">{address}</div>

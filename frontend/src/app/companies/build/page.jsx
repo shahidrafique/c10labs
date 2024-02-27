@@ -21,6 +21,7 @@ export default async function Build() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
+              key={href}
               href={href}
               className={`tab ${
                 href === "/companies/build" ? "tab--active" : ""
@@ -34,7 +35,7 @@ export default async function Build() {
 
       {companySections.map(({ title, companies }) => (
         <>
-          <section className="section-title">
+          <section key={title} className="section-title">
             <div className="container">
               <h2>{title}</h2>
             </div>
@@ -44,7 +45,13 @@ export default async function Build() {
             <div className="container">
               <div className="companies__container">
                 {companies.map(({ name, image, href = "" }) => (
-                  <Company title={name} src={image?.url} link={href} inner />
+                  <Company
+                    key={name}
+                    title={name}
+                    src={image?.url}
+                    link={href}
+                    inner
+                  />
                 ))}
               </div>
             </div>
