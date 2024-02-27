@@ -10,7 +10,7 @@ export default async function Contact() {
       <Banner {...banner} />
       <section className="contact">
         <div className="container">
-          {/* <section className="contact-form">
+          <section className="contact-form">
             {form.input.map(({ label, type }) => (
               <div className="input-wrapper" key={label}>
                 <label>{label}</label> <input type={type} />
@@ -24,7 +24,7 @@ export default async function Contact() {
               className="button button--submit"
               label={form.submitButton.text}
             />
-          </section> */}
+          </section>
         </div>
       </section>
     </main>

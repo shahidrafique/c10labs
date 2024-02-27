@@ -36,7 +36,7 @@ query {
                 text
                 href
               }
-              companies {
+              companies(pagination: { limit: 100 }) {
                 data {
                   attributes {
                     name

@@ -32,7 +32,7 @@ query {
           data {
             attributes {
               title
-              people {
+              people(pagination: { limit: 100 }) {
                 data {
                   attributes {
                     name

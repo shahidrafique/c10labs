@@ -13,6 +13,8 @@ export default async function Build() {
     companySections = [],
   } = props ?? {};
 
+  console.log(companySections[0].companies, companySections);
+
   return (
     <main>
       <Banner {...banner} />
@@ -45,6 +47,7 @@ export default async function Build() {
           <section className="companies companies--inner-page">
             <div className="container">
               <div className="companies__container">
+                {companies.length === 0 ? <p>No Data Available</p> : null}
                 {companies.map(({ name, image, href = "" }) => (
                   <Company
                     key={name}
