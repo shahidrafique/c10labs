@@ -3,7 +3,7 @@ import { getPost } from "../../../../api/controllers/postController";
 
 export default async function Post({ params: { id } }) {
   const props = await getPost(id);
-  const [{ title, content }] = props;
+  const [{ title = "", content = "" } = {}] = props ?? [];
 
   return (
     <main>

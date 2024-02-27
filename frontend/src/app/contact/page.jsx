@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export default async function Contact() {
   const props = await getContactPage();
-  const { banner, form } = props;
+  const { banner = {}, form } = props ?? {};
 
   return (
     <main>

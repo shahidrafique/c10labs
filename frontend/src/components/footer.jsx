@@ -31,7 +31,7 @@ export default async function Header() {
           <div className="footer__nav">
             <ul>
               {menus[0].links.map(({ title, href = "" }) => (
-                <li key={title}>
+                <li key={href}>
                   <Link href={href}>{title}</Link>
                 </li>
               ))}
@@ -60,7 +60,7 @@ export default async function Header() {
       <div className="container copy">
         <div className="left">
           {menus[1]?.links.map(({ title, href = "" }) => (
-            <Link href={href} key={href}>
+            <Link key={href} href={href}>
               {title}
             </Link>
           ))}

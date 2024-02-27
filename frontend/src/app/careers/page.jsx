@@ -6,11 +6,11 @@ import Link from "next/link";
 export default async function Careers() {
   const props = await getCareerPage();
   const {
-    banner,
-    menu: { links },
-    menuTitle,
+    banner = {},
+    menu: { links = [] } = {},
+    menuTitle = "",
     content = "",
-  } = props;
+  } = props ?? {};
 
   return (
     <main>

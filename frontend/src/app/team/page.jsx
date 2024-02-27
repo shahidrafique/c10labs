@@ -7,11 +7,11 @@ import Link from "next/link";
 export default async function Team() {
   const props = await getTeamPage();
   const {
-    banner,
-    menu: { links },
-    founders,
-    content,
-  } = props;
+    banner = {},
+    menu: { links = [] } = {},
+    founders = [],
+    content = "",
+  } = props ?? {};
 
   return (
     <main>

@@ -1,33 +1,7 @@
-"use client";
-import { useEffect } from "react";
 import StrapiImage from "./StrapiImage";
+import FoundersAnimations from "./animations/Founder";
 
 export default function Founders({ founders }) {
-  useEffect(() => {
-    let members = document.querySelectorAll(".founder-members .founder-member");
-
-    gsap.to(members[0], {
-      yPercent: -60,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".founder-members",
-        duration: 1,
-        scrub: true,
-        start: "top 75%",
-      },
-    });
-
-    gsap.to(members[2], {
-      yPercent: 60,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".founder-members",
-        duration: 1,
-        scrub: true,
-        start: "top 75%",
-      },
-    });
-  });
   return (
     <div className="container">
       <h2 className="founder-outline">Founders</h2>
@@ -45,6 +19,7 @@ export default function Founders({ founders }) {
           </div>
         ))}
       </section>
+      <FoundersAnimations />
     </div>
   );
 }

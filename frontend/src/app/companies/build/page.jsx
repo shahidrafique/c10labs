@@ -2,15 +2,16 @@ import Banner from "@/components/Banner";
 import Company from "../../../components/company";
 import { getBuildPage } from "../../../../api/controllers/buildPageController";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default async function Build() {
   const props = await getBuildPage();
 
   const {
-    banner,
-    menu: { links },
-    companySections,
-  } = props;
+    banner = {},
+    menu: { links = [] } = {},
+    companySections = [],
+  } = props ?? {};
 
   return (
     <main>
@@ -34,8 +35,8 @@ export default async function Build() {
       </section>
 
       {companySections.map(({ title, companies }) => (
-        <>
-          <section key={title} className="section-title">
+        <Fragment key={title}>
+          <section className="section-title">
             <div className="container">
               <h2>{title}</h2>
             </div>
@@ -56,7 +57,7 @@ export default async function Build() {
               </div>
             </div>
           </section>
-        </>
+        </Fragment>
       ))}
     </main>
   );

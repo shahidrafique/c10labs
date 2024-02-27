@@ -4,7 +4,7 @@ import Markdown from "react-markdown";
 
 export default async function Process() {
   const props = await getProcessPage();
-  const { banner, processes } = props;
+  const { banner = {}, processes = [] } = props ?? {};
 
   return (
     <main>

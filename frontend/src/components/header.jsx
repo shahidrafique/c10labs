@@ -16,7 +16,7 @@ export default async function Header() {
         </div>
         <ul className="nav">
           {links.map(({ title, href = "" }) => (
-            <li key={title}>
+            <li key={href}>
               <Link href={href} className="nav__item">
                 {title}
               </Link>

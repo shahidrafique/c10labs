@@ -2,14 +2,15 @@ import Banner from "@/components/Banner";
 import { getCompaniesPage } from "../../../api/controllers/companiesPageController";
 import Company from "../../components/company";
 import Link from "next/link";
+import { Fragment } from "react";
 
 export default async function Companies() {
   const props = await getCompaniesPage();
   const {
-    banner,
-    menu: { links },
-    companySections,
-  } = props;
+    banner = {},
+    menu: { links = [] } = {},
+    companySections = [],
+  } = props ?? {};
 
   return (
     <main>
@@ -20,7 +21,7 @@ export default async function Companies() {
         <div className="container">
           {links.map(({ title, href = "" }) => (
             <Link
-              key={title}
+              key={href}
               href={href}
               className={`tab ${href === "/companies" ? "tab--active" : ""}`}
             >
@@ -31,8 +32,8 @@ export default async function Companies() {
       </section>
 
       {companySections.map(({ title, companies }) => (
-        <>
-          <section className="section-title" key={title}>
+        <Fragment key={title}>
+          <section className="section-title">
             <div className="container">
               <h2>{title}</h2>
             </div>
@@ -53,7 +54,7 @@ export default async function Companies() {
               </div>
             </div>
           </section>
-        </>
+        </Fragment>
       ))}
     </main>
   );
