@@ -1,3 +1,4 @@
+import { Poppins } from "next/font/google";
 import "../../scss/styles.scss";
 
 import Header from "../components/header";
@@ -9,9 +10,15 @@ export const metadata = {
   description: "AI VENTURE STUDIO",
 };
 
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "500", "600", "700", "900"],
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={font.className}>
       <body>
         <Header />
         {children}
