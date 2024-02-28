@@ -5,16 +5,17 @@ import gsap from "gsap";
 
 export default function AboutAnimations() {
   useGSAP(() => {
-    gsap.to(".about__image", {
-      yPercent: -20,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".about",
-        duration: 1,
-        scrub: true,
-        start: "top 100%",
-      },
-    });
+    if (window.innerWidth >= 768)
+      gsap.to(".about__image", {
+        yPercent: -20,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about",
+          duration: 1,
+          scrub: true,
+          start: "top 100%",
+        },
+      });
   });
   return <></>;
 }
