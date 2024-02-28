@@ -2,6 +2,7 @@
   $self: &;
   display: flex;
   align-items: center;
+  transition: 0.35s;
 
   #{$self}__item {
     font-size: clamp(16px, scale(18), 20px);
@@ -21,16 +22,17 @@
     flex-direction: column;
     top: 84px;
     width: 100%;
-    background-color: black;
+    background-color: $gray-lightest;
     max-height: 0;
     overflow: hidden;
+
     li {
       padding: 10px 0;
-      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
       width: 100%;
       text-align: right;
       a {
-        color: white;
+        color: $black;
       }
     }
   }

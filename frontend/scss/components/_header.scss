@@ -35,6 +35,8 @@
     right: 20px;
     top: 31px;
     display: none !important;
+    width: 27px;
+    height: 18px;
     span {
       width: 27px;
       height: 3px;
@@ -42,6 +44,7 @@
       display: block;
       margin-bottom: 3px;
       transition: 0.35s;
+      pointer-events: none;
     }
 
     &.show {
@@ -62,6 +65,13 @@
     }
     @include sm {
       display: block !important;
+    }
+  }
+  &.show {
+    .nav {
+      @include md {
+        max-height: 500px;
+      }
     }
   }
 }

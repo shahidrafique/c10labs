@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getHeader } from "../../api/controllers/headerController";
+import MenuButton from "@/components/menuButton";
 import StrapiImage from "./StrapiImage";
 
 export default async function Header() {
@@ -23,12 +24,8 @@ export default async function Header() {
             </li>
           ))}
         </ul>
-        <div className="menu-button">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
+      <MenuButton />
     </header>
   );
 }

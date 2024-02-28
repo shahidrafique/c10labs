@@ -46,6 +46,7 @@ query home {
           data {
             attributes {
               title
+              content
               button {
                 text
                 href
