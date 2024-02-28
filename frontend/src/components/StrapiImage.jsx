@@ -9,7 +9,6 @@ export default function StrapiImage({
 }) {
   const fullSrc =
     (process.env.STRAPI_URL ?? process.env.NEXT_PUBLIC_STRAPI_URL) + src;
-  console.log(fullSrc);
   return useNextImage ? (
     <Image src={fullSrc} width={width} height={height} {...rest} />
   ) : (

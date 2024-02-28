@@ -8,8 +8,6 @@ export default function Form({ region, portalId, formId, css }) {
       portalId={portalId}
       formId={formId}
       css={css}
-      onSubmit={() => console.log("Submit!")}
-      onReady={(form) => console.log("Form ready!")}
       loading={<div>Loading...</div>}
     />
   );
