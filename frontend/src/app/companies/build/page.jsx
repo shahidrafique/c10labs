@@ -47,7 +47,7 @@ export default async function Build() {
           <section className="companies companies--inner-page">
             <div className="container">
               <div className="companies__container">
-                {companies.length === 0 ? <p>No Data Available</p> : null}
+                {companies.length === 0 ? <p>Coming soon</p> : null}
                 {companies.map(({ name, image, href = "" }) => (
                   <Company
                     key={name}
