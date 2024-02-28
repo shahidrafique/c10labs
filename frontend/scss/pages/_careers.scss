@@ -62,8 +62,8 @@
         font-size: clamp(30px, scale(60), 120px);
         font-weight: bold;
         color: $bright-red;
-        position: sticky;
-        top: 50px;
+        // position: sticky;
+        // top: 50px;
       }
       @include xs {
         flex-direction: column;

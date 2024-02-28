@@ -84,30 +84,79 @@
     }
 
     &__input {
+      position: relative;
       width: scale(600);
       background-color: white;
       border-radius: 50px;
       padding: 5px;
       display: flex;
+      color: $black;
+      text-align: center;
+      > div {
+        width: 100%;
 
-      input {
-        flex: 1;
-        border-radius: 50px;
-        border: 0;
-        padding-right: 65px;
-        padding-left: 10px;
-        font-size: 16px;
-        outline: none;
+        > div {
+          width: 100%;
+
+          form {
+            width: 100%;
+            .hs-email {
+              flex: 1;
+              .hs-input {
+                flex: 1;
+                border-radius: 50px;
+                border: 0;
+                padding-right: 65px;
+                padding-left: 10px;
+                font-size: 16px;
+                outline: none;
+                height: 37px;
+              }
+            }
+            .hs-submit {
+              .actions {
+                .hs-button {
+                  background-color: $silver-gray;
+                  color: white;
+                  border-radius: 50px;
+                  border: 0;
+                  padding: 10px 30px;
+                  margin-left: -60px;
+                }
+              }
+            }
+          }
+        }
       }
 
-      button {
-        background-color: $silver-gray;
-        color: white;
-        border-radius: 50px;
-        border: 0;
-        padding: 10px 30px;
-        margin-left: -60px;
+      .hs-error-msgs {
+        position: absolute;
+
+        width: 100%;
+        text-align: center;
+        color: $bright-red;
+        bottom: -26px;
+        font-size: 12px;
       }
+
+      // input {
+      //   flex: 1;
+      //   border-radius: 50px;
+      //   border: 0;
+      //   padding-right: 65px;
+      //   padding-left: 10px;
+      //   font-size: 16px;
+      //   outline: none;
+      // }
+
+      // button {
+      //   background-color: $silver-gray;
+      //   color: white;
+      //   border-radius: 50px;
+      //   border: 0;
+      //   padding: 10px 30px;
+      //   margin-left: -60px;
+      // }
     }
   }
 

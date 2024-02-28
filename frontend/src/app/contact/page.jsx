@@ -11,11 +11,13 @@ export default async function Contact() {
       <Banner {...banner} />
       <section className="contact">
         <div className="container">
-          <Form
-            region="na1"
-            portalId="44606217"
-            formId="4f67d4cc-472c-46aa-b1db-f7797315a726"
-          />
+          <div className="contact-form">
+            <Form
+              region="na1"
+              portalId="44606217"
+              formId="4f67d4cc-472c-46aa-b1db-f7797315a726"
+            />
+          </div>
         </div>
       </section>
     </main>
