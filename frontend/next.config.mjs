@@ -8,6 +8,10 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    loader: "custom",
+    loaderFile: "/src/loaders/image.js",
+  },
 };
 
 export default nextConfig;

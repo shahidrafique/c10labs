@@ -23,7 +23,13 @@ export default function About({
           </Link>
         </div>
         <div className="about__image">
-          <StrapiImage src={image?.url} alt="" />
+          <StrapiImage
+            useNextImage
+            width={600}
+            height={735}
+            src={image?.url}
+            alt=""
+          />
         </div>
       </div>
       <div className="about__image__overlay">
