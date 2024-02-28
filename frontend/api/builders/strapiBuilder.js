@@ -1,9 +1,9 @@
 export default function strapiBuilder(query) {
-  return (key) => (parser) => async (req) => {
+  return (key) => (parser) => async () => {
     try {
-      console.log(req.url);
       const res = await fetch(process.env.STRAPI_URL_GRAPHQL, {
         method: "POST",
+        cache: "no-store",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ query }),
       });
