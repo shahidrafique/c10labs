@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import { getContactPage } from "../../../api/controllers/contactPageController";
+import Form from "@/components/Form";
 
 export default async function Contact() {
   const props = await getContactPage();
@@ -10,21 +11,11 @@ export default async function Contact() {
       <Banner {...banner} />
       <section className="contact">
         <div className="container">
-          <section className="contact-form">
-            {form.input.map(({ label, type }) => (
-              <div className="input-wrapper" key={label}>
-                <label>{label}</label> <input type={type} />
-              </div>
-            ))}
-            <div className="input-wrapper">
-              <label>message</label> <textarea />
-            </div>
-            <input
-              type="submit"
-              className="button button--submit"
-              label={form.submitButton.text}
-            />
-          </section>
+          <Form
+            region="na1"
+            portalId="44606217"
+            formId="4f67d4cc-472c-46aa-b1db-f7797315a726"
+          />
         </div>
       </section>
     </main>

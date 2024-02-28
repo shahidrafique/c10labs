@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getFooter } from "../../api/controllers/footerController";
 import StrapiImage from "./StrapiImage";
+import Form from "./Form";
 
 export default async function Header() {
   const props = await getFooter();
@@ -55,14 +56,12 @@ export default async function Header() {
             <p>{newsLetter.subtitle}</p>
           </div>
           <div className="subscribe__input">
-            {/* <script
-              charset="utf-8"
-              type="text/javascript"
-              src="//js.hsforms.net/forms/embed/v2.js"
-            ></script> */}
-            {/* <script src="/contact-form.js"></script> */}
-            <input type="text" placeholder={newsLetter.placeholder} />
-            <button>{newsLetter.buttonText}</button>
+            <Form
+              region="na1"
+              portalId="44606217"
+              formId="9021f928-f0f9-4cd8-a1ab-6cea0fbbd4b2"
+              css="form {display: flex} input {position: relative} input[type=submit] {padding: 1rem}"
+            />
           </div>
         </div>
       </div>
