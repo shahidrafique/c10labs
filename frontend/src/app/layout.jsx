@@ -12,7 +12,7 @@ export const metadata = {
 
 const font = Poppins({
   subsets: ["latin"],
-  weight: ["300", "500", "600", "700", "900"],
+  weight: ["300", "400", "500", "600", "700", "900"],
   display: "swap",
 });
 
