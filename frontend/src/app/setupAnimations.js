@@ -5,10 +5,10 @@ import gsap from "gsap";
 import scrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 
+gsap.registerPlugin(scrollTrigger);
+
 export default function SetupAnimations() {
   useEffect(() => {
-    gsap.registerPlugin(scrollTrigger);
-
     const lenis = new Lenis({
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });

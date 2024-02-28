@@ -1,8 +1,18 @@
-export default function StrapiImage({ src, ...rest }) {
-  return (
-    <img
-      src={(process.env.STRAPI_URL ?? process.env.NEXT_PUBLIC_STRAPI_URL) + src}
-      {...rest}
-    />
+import Image from "next/image";
+
+export default function StrapiImage({
+  src,
+  width,
+  height,
+  useNextImage,
+  ...rest
+}) {
+  const fullSrc =
+    (process.env.STRAPI_URL ?? process.env.NEXT_PUBLIC_STRAPI_URL) + src;
+  console.log(fullSrc);
+  return useNextImage ? (
+    <Image src={fullSrc} width={width} height={height} {...rest} />
+  ) : (
+    <img src={fullSrc} {...rest} />
   );
 }
