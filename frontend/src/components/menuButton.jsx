@@ -12,8 +12,13 @@ export default function MenuButton() {
     elem.current.parentNode.classList.toggle("show");
   };
 
+  const closeMenu = () => {
+    elem.current.classList.remove("show");
+    elem.current.parentNode.classList.remove("show");
+  };
+
   useEffect(() => {
-    toggleMenu();
+    closeMenu();
   }, [pathname]);
 
   return (
