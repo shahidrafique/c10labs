@@ -1,9 +1,9 @@
 query {
-  posts(filters: { href: { eq: "%s" } }) {
+  posts(filters: { slug: { eq: "%s" } }) {
     data {
       attributes {
         title
-        href
+        slug
         content
       }
     }

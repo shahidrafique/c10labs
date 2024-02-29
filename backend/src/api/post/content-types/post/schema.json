@@ -18,7 +18,7 @@
     "content": {
       "type": "richtext"
     },
-    "href": {
+    "slug": {
       "type": "string"
     }
   }
