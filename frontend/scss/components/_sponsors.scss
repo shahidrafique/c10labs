@@ -25,8 +25,16 @@
     }
   }
   @include xs {
+    padding: 50px 0;
     .logos-container {
       overflow: hidden;
+      ul {
+        li {
+          img {
+            height: 20px;
+          }
+        }
+      }
     }
   }
 }
