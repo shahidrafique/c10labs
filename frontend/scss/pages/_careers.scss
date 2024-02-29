@@ -64,14 +64,17 @@
         color: $bright-red;
         // position: sticky;
         // top: 50px;
+        display: flex;
+        flex-direction: column;
         .btn-back {
-          display: block;
+          display: inline-flex;
+          gap: 10px;
           font-size: 16px;
           color: $black;
           font-weight: 300;
           width: fit-content;
           img {
-            width: 24px;
+            width: 16px;
           }
           &:hover {
             color: $bright-red;
