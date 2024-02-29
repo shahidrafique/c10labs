@@ -8,6 +8,8 @@ export default async function Careers() {
   const props = await getCareerPage();
   const jobs = await getJobs();
 
+  console.log(jobs, "jobs");
+
   const { banner = {}, menuTitle = "", content = "" } = props ?? {};
 
   return (
@@ -26,7 +28,7 @@ export default async function Careers() {
 
           <div className="list">
             <ul>
-              {jobs.map(({ title, slug }) => (
+              {jobs?.map(({ title, slug }) => (
                 <li key={title}>
                   <Link href={`/careers/${slug}`}>{title}</Link>
                 </li>

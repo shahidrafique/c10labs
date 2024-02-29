@@ -44,7 +44,7 @@
     position: absolute;
     flex: 1;
 
-    height: calc(100% + 20vw);
+    height: calc(100% + 15vw);
     width: 50%;
     right: 0;
     background-color: $silver-gray;
@@ -63,7 +63,7 @@
     bottom: 0;
 
     left: 50%;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 20%);
 
     img {
       width: 100vw;

@@ -1,7 +1,9 @@
 .sponsors {
-  padding: scale(150) 0 scale(100);
+  padding: 100px 0;
   background-color: $gray-light;
   .logos-container {
+    position: relative;
+    z-index: 1;
     ul {
       display: flex;
       gap: scale(70);
@@ -10,11 +12,13 @@
       li {
         img {
           vertical-align: top;
-          width: scale(250);
-          object-fit: contain;
-          filter: grayscale(1);
+          height: 36px;
+          width: auto;
+          opacity: 0.4;
+          display: inline-block;
+          transition: 0.35s;
           &:hover {
-            filter: grayscale(0);
+            opacity: 1;
           }
         }
       }
@@ -23,14 +27,6 @@
   @include xs {
     .logos-container {
       overflow: hidden;
-      ul {
-        li {
-          img {
-            width: 100px;
-            height: 60px;
-          }
-        }
-      }
     }
   }
 }
