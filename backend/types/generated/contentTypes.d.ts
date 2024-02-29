@@ -898,6 +898,46 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
 }
 
+export interface ApiBuildBuild extends Schema.SingleType {
+  collectionName: 'builds';
+  info: {
+    singularName: 'build';
+    pluralName: 'builds';
+    displayName: 'Build';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'api::banner.banner'
+    >;
+    companySections: Attribute.Relation<
+      'api::build.build',
+      'oneToMany',
+      'api::company-section.company-section'
+    >;
+    menu: Attribute.Relation<'api::build.build', 'oneToOne', 'api::menu.menu'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::build.build',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBuildPageBuildPage extends Schema.SingleType {
   collectionName: 'build_pages';
   info: {
@@ -1325,30 +1365,6 @@ export interface ApiIndexIndex extends Schema.SingleType {
       'oneToOne',
       'admin::user'
     > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiJobJob extends Schema.CollectionType {
-  collectionName: 'jobs';
-  info: {
-    singularName: 'job';
-    pluralName: 'jobs';
-    displayName: 'Job';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    content: Attribute.RichText;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::job.job', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1830,6 +1846,7 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::advisors-page.advisors-page': ApiAdvisorsPageAdvisorsPage;
       'api::banner.banner': ApiBannerBanner;
+      'api::build.build': ApiBuildBuild;
       'api::build-page.build-page': ApiBuildPageBuildPage;
       'api::careers-page.careers-page': ApiCareersPageCareersPage;
       'api::company.company': ApiCompanyCompany;
@@ -1841,7 +1858,6 @@ declare module '@strapi/types' {
       'api::founder.founder': ApiFounderFounder;
       'api::header.header': ApiHeaderHeader;
       'api::index.index': ApiIndexIndex;
-      'api::job.job': ApiJobJob;
       'api::menu.menu': ApiMenuMenu;
       'api::our-team.our-team': ApiOurTeamOurTeam;
       'api::people.people': ApiPeoplePeople;

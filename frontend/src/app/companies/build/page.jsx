@@ -13,8 +13,6 @@ export default async function Build() {
     companySections = [],
   } = props ?? {};
 
-  console.log(companySections[0].companies, companySections);
-
   return (
     <main>
       <Banner {...banner} />

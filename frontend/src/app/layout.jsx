@@ -13,12 +13,13 @@ export const metadata = {
 const font = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "900"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={font.variable}>
       <body>
         <Header />
         {children}

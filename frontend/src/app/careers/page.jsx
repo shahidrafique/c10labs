@@ -2,15 +2,13 @@ import Banner from "@/components/Banner";
 import { getCareerPage } from "../../../api/controllers/careerPageController";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import { getJobs } from "../../../api/controllers/jobsController";
 
 export default async function Careers() {
   const props = await getCareerPage();
-  const {
-    banner = {},
-    menu: { links = [] } = {},
-    menuTitle = "",
-    content = "",
-  } = props ?? {};
+  const jobs = await getJobs();
+
+  const { banner = {}, menuTitle = "", content = "" } = props ?? {};
 
   return (
     <main>
@@ -28,7 +26,7 @@ export default async function Careers() {
 
           <div className="list">
             <ul>
-              {links.map(({ title, href = "" }) => (
+              {jobs.map(({ title, href = "" }) => (
                 <li key={href}>
                   <Link href={href}>{title}</Link>
                 </li>

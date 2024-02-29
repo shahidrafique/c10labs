@@ -9,7 +9,6 @@ export default function Companies({
 }) {
   const [titleText, titleYear] = title.split(" - ");
 
-  console.log(content, "content");
   return (
     <section className="companies">
       <section className="container">
