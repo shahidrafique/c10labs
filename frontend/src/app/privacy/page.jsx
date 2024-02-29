@@ -50,8 +50,6 @@ export default async function Privacy() {
 
             <li>Sharing Of Personal Information</li>
 
-            <li>Sharing Of Personal Information</li>
-
             <li>Information About Our Website</li>
 
             <li>Interest-Based Advertising</li>

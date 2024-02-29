@@ -28,7 +28,7 @@ export default async function Careers() {
             <ul>
               {jobs.map(({ title, href = "" }) => (
                 <li key={href}>
-                  <Link href={href}>{title}</Link>
+                  <Link href={`/careers/${href}`}>{title}</Link>
                 </li>
               ))}
             </ul>

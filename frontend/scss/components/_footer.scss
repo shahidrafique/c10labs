@@ -102,6 +102,8 @@
       display: flex;
       color: $black;
       text-align: center;
+      height: 47px;
+      align-items: center;
       > div {
         width: 100%;
 
@@ -126,17 +128,24 @@
             .hs-submit {
               .actions {
                 .hs-button {
-                  background-color: $silver-gray;
+                  background-color: $black;
                   color: white;
                   border-radius: 50px;
                   border: 0;
                   padding: 10px 30px;
                   margin-left: -60px;
+                  &:hover {
+                    background-color: $bright-red;
+                  }
                 }
               }
             }
           }
         }
+      }
+
+      .hs_error_rollup {
+        display: none;
       }
 
       .hs-error-msgs {
