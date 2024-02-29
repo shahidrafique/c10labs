@@ -4,12 +4,7 @@
   .logos-container {
     position: relative;
     z-index: 1;
-    ul {
-      display: flex;
-      gap: scale(70);
-      align-items: center;
-      justify-content: center;
-      li {
+    
         img {
           vertical-align: top;
           height: 36px;
@@ -20,8 +15,6 @@
           &:hover {
             opacity: 1;
           }
-        }
-      }
     }
   }
   @include xs {
@@ -37,4 +30,8 @@
       }
     }
   }
+  .slick-slide {
+    margin: 0 4rem;
+  }
 }
+
