@@ -1,6 +1,6 @@
 .stories {
   $self: &;
-  padding: scale(100) 0 scale(150);
+  padding: scale(100) 0 scale(80);
   background-color: $gray-light;
   #{$self}__header {
     margin-bottom: scale(30);
@@ -17,13 +17,14 @@
   }
   #{$self}__holder {
     display: flex;
-    gap: scale(60);
+
+    gap: clamp(15px, scale(60), 80px);
     width: 100%;
   }
 
   #{$self}__all {
     justify-content: center;
-    margin-top: 70px;
+    margin-top: scale(80);
   }
   &#{$self}--inner-page {
     background-color: transparent;
@@ -33,7 +34,7 @@
     z-index: 1;
 
     #{$self}__holder {
-      gap: scale(30);
+      gap: clamp(15px, scale(60), 80px);
       flex-wrap: wrap;
     }
   }
@@ -52,8 +53,6 @@
       background-color: transparent;
 
       #{$self}__holder {
-        gap: scale(30);
-
         flex-direction: column;
       }
     }
@@ -81,7 +80,7 @@
     }
   }
   #{$self}__content {
-    padding: scale(50);
+    padding: clamp(15px, scale(50), 30px);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -114,7 +113,7 @@
     }
   }
   &#{$self}--inner {
-    width: calc(33.3% - 1.05vw);
+    width: calc(33.3% - 2.1vw);
     flex: none;
     background: $gray-lightest;
     #{$self}__image {
@@ -127,13 +126,11 @@
       }
     }
     #{$self}__content {
-      padding: scale(30);
-
       .tag {
         font-size: 12px;
       }
       #{$self}__content__title {
-        font-size: clamp(20px, scale(32), 42px);
+        font-size: clamp(20px, scale(32), 32px);
       }
       .button__more {
         font-size: 16px;
@@ -145,7 +142,7 @@
       flex-direction: row;
       border: 1px solid $gray-light;
       background: white;
-      backdrop-filter: blur(50px);
+
       #{$self}__image {
         flex: 1.45;
         aspect-ratio: auto;
@@ -163,13 +160,15 @@
         justify-content: space-between;
 
         h3 {
-          margin-bottom: 0;
           font-size: clamp(24px, scale(32), 42px);
         }
         p {
           font-size: clamp(14px, scale(16), 20px);
         }
       }
+    }
+    @include md {
+      width: calc(50% - 1.7vw);
     }
     @include xs {
       width: 100%;

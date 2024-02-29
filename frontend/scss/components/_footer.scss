@@ -19,7 +19,7 @@
     gap: 30px;
     #{$self}__logo {
       display: flex;
-      width: 250px;
+      width: 150px;
 
       img {
         height: auto;
@@ -40,9 +40,14 @@
       }
     }
     @include xs {
-      flex-direction: column;
-      align-items: flex-start;
       gap: 15px;
+      justify-content: space-between;
+      width: 100%;
+      .social-media {
+        img {
+          width: 24px;
+        }
+      }
     }
   }
 
@@ -136,32 +141,12 @@
 
       .hs-error-msgs {
         position: absolute;
-
         width: 100%;
         text-align: center;
         color: $bright-red;
         bottom: -26px;
         font-size: 12px;
       }
-
-      // input {
-      //   flex: 1;
-      //   border-radius: 50px;
-      //   border: 0;
-      //   padding-right: 65px;
-      //   padding-left: 10px;
-      //   font-size: 16px;
-      //   outline: none;
-      // }
-
-      // button {
-      //   background-color: $silver-gray;
-      //   color: white;
-      //   border-radius: 50px;
-      //   border: 0;
-      //   padding: 10px 30px;
-      //   margin-left: -60px;
-      // }
     }
   }
 
@@ -195,15 +180,12 @@
       align-items: flex-start;
       gap: 15px;
     }
-    #{$self}__logo {
-      width: 200px;
-      img {
-        width: 100%;
-      }
-    }
+
     #{$self}__nav {
       ul {
+        flex-wrap: wrap;
         li {
+          width: 48%;
           a {
             font-size: 12px;
           }

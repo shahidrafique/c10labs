@@ -35,5 +35,8 @@
         font-family: inherit;
       }
     }
+    @include xs {
+      width: 100%;
+    }
   }
 }

@@ -8,7 +8,7 @@ export default async function Header() {
   const { newsLetter = {}, menus = [], address = "", background } = props ?? {};
 
   return (
-    <footer className="footer" style={{ background: background?.url }}>
+    <footer className="footer">
       <div className="container">
         <div className="footer__left">
           <div className="footer__logo">

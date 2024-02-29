@@ -11,7 +11,7 @@ export default function FoundersAnimations() {
       );
 
       gsap.to(members[0], {
-        yPercent: -60,
+        yPercent: -50,
         ease: "none",
         scrollTrigger: {
           trigger: ".founder-members",
@@ -22,7 +22,7 @@ export default function FoundersAnimations() {
       });
 
       gsap.to(members[2], {
-        yPercent: 60,
+        yPercent: 50,
         ease: "none",
         scrollTrigger: {
           trigger: ".founder-members",
