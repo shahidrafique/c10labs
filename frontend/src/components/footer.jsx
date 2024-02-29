@@ -12,7 +12,7 @@ export default async function Header() {
       <div className="container">
         <div className="footer__left">
           <div className="footer__logo">
-            <StrapiImage src={menus[0].image?.url} alt="Vercel Logo" />
+            <StrapiImage src={menus[0]?.image?.url} alt="Vercel Logo" />
           </div>
           <div className="social-media">
             <ul>
@@ -40,7 +40,7 @@ export default async function Header() {
         <div className="footer-right">
           <div className="footer__nav">
             <ul>
-              {menus[0].links.map(({ title, href = "" }) => (
+              {menus[0]?.links.map(({ title, href = "" }) => (
                 <li key={href}>
                   <Link href={href}>{title}</Link>
                 </li>
