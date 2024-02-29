@@ -1,37 +1,35 @@
 .sponsors {
   padding: 100px 0;
   background-color: $gray-light;
+  max-height: 236px;
   .logos-container {
     position: relative;
     z-index: 1;
-    
-        img {
-          vertical-align: top;
-          height: 36px;
-          width: auto;
-          opacity: 0.4;
-          display: inline-block;
-          transition: 0.35s;
-          &:hover {
-            opacity: 1;
-          }
+
+    img {
+      vertical-align: top;
+      height: 36px;
+      width: auto;
+      opacity: 0.4;
+      display: inline-block;
+      transition: 0.35s;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
   @include xs {
     padding: 50px 0;
+    max-height: 156px;
     .logos-container {
       overflow: hidden;
-      ul {
-        li {
-          img {
-            height: 20px;
-          }
-        }
+
+      img {
+        height: 20px;
       }
     }
   }
   .slick-slide {
-    margin: 0 4rem;
+    margin: 0 scale(50);
   }
 }
-

@@ -10,20 +10,25 @@ export default function Sponsors({ logos }) {
     <section className="sponsors">
       <div className="logos-container">
         <Slider
-          speed={500}
+          speed={5000}
           dots={false}
-          infinite
+          pauseOnHover={false}
+          cssEase="linear"
           slidesToScroll={1}
           autoplay
+          autoplaySpeed={0}
           variableWidth
           arrows={false}
         >
           {/* duplicate to better fill up space on the screen */}
           {logos?.map(({ logos: [{ url }] }) => (
-            <StrapiImage key={url + 1} src={url} alt="" />
+            <StrapiImage key={url + 1} src={url} alt="sponsors" />
           ))}
           {logos?.map(({ logos: [{ url }] }) => (
-            <StrapiImage key={url + 2} src={url} alt="" />
+            <StrapiImage key={url + 2} src={url} alt="sponsors" />
+          ))}
+          {logos?.map(({ logos: [{ url }] }) => (
+            <StrapiImage key={url + 3} src={url} alt="sponsors" />
           ))}
         </Slider>
       </div>
