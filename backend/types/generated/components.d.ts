@@ -1,5 +1,16 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BannerLink extends Schema.Component {
+  collectionName: 'components_banner_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    text: Attribute.String;
+    href: Attribute.String;
+  };
+}
+
 export interface ButtonButton extends Schema.Component {
   collectionName: 'components_button_buttons';
   info: {
@@ -66,6 +77,7 @@ export interface NewsletterNewsLetter extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'banner.link': BannerLink;
       'button.button': ButtonButton;
       'company.company': CompanyCompany;
       'input.input': InputInput;

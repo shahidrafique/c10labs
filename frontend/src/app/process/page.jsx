@@ -3,6 +3,10 @@ import { getProcessPage } from "../../../api/controllers/processPageController";
 import Markdown from "react-markdown";
 import ProcessAnimations from "@/components/animations/Process";
 
+export const metadata = {
+  title: "Processes",
+};
+
 export default async function Process() {
   const props = await getProcessPage();
   const { banner = {}, processes = [] } = props ?? {};

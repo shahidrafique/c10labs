@@ -25,6 +25,12 @@
         "videos",
         "audios"
       ]
+    },
+    "link": {
+      "displayName": "Link",
+      "type": "component",
+      "repeatable": false,
+      "component": "banner.link"
     }
   }
 }

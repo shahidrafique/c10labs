@@ -4,11 +4,13 @@ import Markdown from "react-markdown";
 import Link from "next/link";
 import { getJobs } from "../../../api/controllers/jobsController";
 
+export const metadata = {
+  title: "Careers",
+};
+
 export default async function Careers() {
   const props = await getCareerPage();
   const jobs = await getJobs();
-
-  console.log(jobs, "jobs");
 
   const { banner = {}, menuTitle = "", content = "" } = props ?? {};
 

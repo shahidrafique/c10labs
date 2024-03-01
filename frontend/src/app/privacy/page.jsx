@@ -1,4 +1,6 @@
-import Banner from "@/components/Banner";
+export const metadata = {
+  title: "Privacy Policy",
+};
 
 export default async function Privacy() {
   return (

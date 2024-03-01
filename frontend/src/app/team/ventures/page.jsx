@@ -3,6 +3,10 @@ import Member from "../../../components/member";
 import { getVenturesPage } from "../../../../api/controllers/venturesPageController";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Ventures",
+};
+
 export default async function Advisors() {
   const props = await getVenturesPage();
 

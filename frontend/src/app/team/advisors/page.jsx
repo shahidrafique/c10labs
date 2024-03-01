@@ -1,8 +1,13 @@
 import Banner from "@/components/Banner";
 import { getAdvisorsPage } from "../../../../api/controllers/advisorsPageController";
 import Member from "../../../components/member";
+import Head from "next/head";
 // import Link from "next/link";
 // import { usePathname } from "next/navigation";
+
+export const metadata = {
+  title: "Advisors",
+};
 
 export default async function Advisors() {
   const props = await getAdvisorsPage();

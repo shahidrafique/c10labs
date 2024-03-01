@@ -1,14 +1,19 @@
 import Script from "next/script";
 import HeroAnimations from "./animations/Hero";
 
-export default function VideoBanner({ video = "", title = "" }) {
+export default function VideoBanner({
+  video = { url: "" },
+  title = "",
+  link = { text: "", href: "" },
+}) {
   const [titleDefault, titleRed] = title.split(" - ");
+
   return (
     <section className="hero">
       <div className="container">
         <div className="hero__image ">
           <video loop="true" autoplay="autoplay" muted>
-            <source src="/hero-video.mp4" type="video/mp4" />
+            <source src={video?.url} type="video/mp4" />
           </video>
         </div>
         <div className="hero__content">
@@ -20,12 +25,8 @@ export default function VideoBanner({ video = "", title = "" }) {
         </div>
       </div>
 
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLScl4Yk2aziSgg63JTlfIYjh8XK2ptHK5W3MpslZ_748ieXoLA/viewform"
-        target="_blank"
-        className="cohort"
-      >
-        Join <span>C10</span>&apos;s Next Cohort
+      <a href={link.href} target="_blank" className="cohort">
+        {link.text}
       </a>
       <HeroAnimations />
     </section>

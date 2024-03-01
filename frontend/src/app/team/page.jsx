@@ -4,6 +4,10 @@ import { getTeamPage } from "../../../api/controllers/teamPageController";
 import Markdown from "react-markdown";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Our Team",
+};
+
 export default async function Team() {
   const props = await getTeamPage();
   const {

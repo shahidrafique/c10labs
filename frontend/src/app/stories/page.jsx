@@ -1,6 +1,11 @@
 import Banner from "@/components/Banner";
 import { getStoriesPage } from "../../../api/controllers/storiesPageController";
 import Stories from "@/components/Stories";
+import Head from "next/head";
+
+export const metadata = {
+  title: "Stories",
+};
 
 export default async function StoriesPage() {
   const props = await getStoriesPage();
