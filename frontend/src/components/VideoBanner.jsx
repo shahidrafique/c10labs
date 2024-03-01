@@ -13,7 +13,7 @@ export default function VideoBanner({
       <div className="container">
         <div className="hero__image ">
           <video loop="true" autoplay="autoplay" muted>
-            <source src={video?.url} type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
         <div className="hero__content">
@@ -25,8 +25,8 @@ export default function VideoBanner({
         </div>
       </div>
 
-      <a href={link.href} target="_blank" className="cohort">
-        {link.text}
+      <a href={link?.href} target="_blank" className="cohort">
+        {link?.text}
       </a>
       <HeroAnimations />
     </section>

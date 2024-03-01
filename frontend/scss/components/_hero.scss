@@ -70,6 +70,9 @@
     span {
       color: $bright-red;
     }
+    &::first-line {
+      color: $bright-red;
+    }
     @include sm {
       left: 15px;
       font-size: 24px;
