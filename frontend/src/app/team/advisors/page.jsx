@@ -6,7 +6,7 @@ import Head from "next/head";
 // import { usePathname } from "next/navigation";
 
 export const metadata = {
-  title: "Advisors",
+  title: "C10 Labs - Advisors",
 };
 
 export default async function Advisors() {

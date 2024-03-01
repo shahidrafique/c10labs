@@ -3,7 +3,7 @@ import { getPost } from "../../../../api/controllers/postController";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Careers",
+  title: "C10 Labs - Careers",
 };
 
 export default async function Post({ params: { id } }) {

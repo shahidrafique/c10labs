@@ -3,7 +3,7 @@ import { getContactPage } from "../../../api/controllers/contactPageController";
 import Form from "@/components/Form";
 
 export const metadata = {
-  title: "Contact Us",
+  title: "C10 Labs - Contact Us",
 };
 
 export default async function Contact() {

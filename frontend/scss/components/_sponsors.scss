@@ -1,7 +1,10 @@
 .sponsors {
   padding: 100px 0;
-  background-color: $gray-light;
+  // background-color: $gray-light;
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
   max-height: 236px;
+  box-shadow: 0 20px 50px rgba($silver-gray, 0.1);
   .logos-container {
     position: relative;
     z-index: 1;
@@ -9,24 +12,25 @@
     img {
       vertical-align: top;
       height: 36px;
-      width: auto;
+      aspect-ratio: 4;
       opacity: 0.4;
       display: inline-block;
       transition: 0.35s;
+      object-fit: contain;
       &:hover {
         opacity: 1;
       }
     }
   }
   @include xs {
-    padding: 50px 0;
+    padding: 30px 0;
     max-height: 156px;
     .logos-container {
       overflow: hidden;
 
       img {
-        height: 20px;
-        width: auto;
+        height: 30px;
+        aspect-ratio: 2;
       }
     }
   }

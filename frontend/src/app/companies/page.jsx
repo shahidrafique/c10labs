@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 
 export const metadata = {
-  title: "Companies",
+  title: "C10 Labs - Companies",
 };
 
 export default async function Companies() {

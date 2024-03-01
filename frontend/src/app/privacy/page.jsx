@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy",
+  title: "C10 Labs - Privacy Policy",
 };
 
 export default async function Privacy() {

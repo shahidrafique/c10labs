@@ -4,7 +4,7 @@ import Stories from "@/components/Stories";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Stories",
+  title: "C10 Labs - Stories",
 };
 
 export default async function StoriesPage() {
