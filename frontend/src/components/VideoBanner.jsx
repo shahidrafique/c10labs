@@ -1,4 +1,5 @@
 import Script from "next/script";
+import HeroAnimations from "./animations/Hero";
 
 export default function VideoBanner({ video = "", title = "" }) {
   const [titleDefault, titleRed] = title.split(" - ");
@@ -9,8 +10,6 @@ export default function VideoBanner({ video = "", title = "" }) {
           <video loop="true" autoplay="autoplay" muted>
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
-
-          {/* <img src="/parallax-bg.jpeg" alt="AI" /> */}
         </div>
         <div className="hero__content">
           <h1>
@@ -28,6 +27,7 @@ export default function VideoBanner({ video = "", title = "" }) {
       >
         Join <span>C10</span>&apos;s Next Cohort
       </a>
+      <HeroAnimations />
     </section>
   );
 }

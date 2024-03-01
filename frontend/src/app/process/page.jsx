@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import { getProcessPage } from "../../../api/controllers/processPageController";
 import Markdown from "react-markdown";
+import ProcessAnimations from "@/components/animations/Process";
 
 export default async function Process() {
   const props = await getProcessPage();
@@ -22,6 +23,7 @@ export default async function Process() {
             </div>
           ))}
         </div>
+        <ProcessAnimations />
       </section>
     </main>
   );

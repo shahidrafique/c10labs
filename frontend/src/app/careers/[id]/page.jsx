@@ -15,7 +15,7 @@ export default async function Post({ params: { id } }) {
               <img src="/back-arrow.svg" alt="back to listing" />
               Jobs listing
             </Link>
-            {title}
+            <h1>{title}</h1>
           </div>
           <div className="job-content">
             <Markdown>{content}</Markdown>

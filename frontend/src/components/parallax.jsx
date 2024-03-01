@@ -1,4 +1,5 @@
 import StrapiImage from "./StrapiImage";
+import ParallaxAnimations from "./animations/Parallax";
 
 export default function Parallax({ title, background }) {
   return (
@@ -7,6 +8,7 @@ export default function Parallax({ title, background }) {
         <StrapiImage src={background?.url} alt="parallax" />
       </div>
       <h2>{title}</h2>
+      <ParallaxAnimations />
     </section>
   );
 }

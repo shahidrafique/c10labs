@@ -10,7 +10,9 @@ export default function Member({ title, designation, src, linkedin = "" }) {
       <div className="member__content">
         <div className="member__content__name">{title}</div>
         <div className="member__content__designation">{designation}</div>
-        <Link href={linkedin} className="member__content__linked"></Link>
+        {linkedin ?? (
+          <Link href={linkedin} className="member__content__linked" />
+        )}
       </div>
     </div>
   );

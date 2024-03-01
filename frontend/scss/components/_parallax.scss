@@ -5,12 +5,13 @@
   justify-content: center;
   height: 80vh;
   background-color: $black;
-  color: $gray-light;
+  color: $gray-lightest;
   position: relative;
+  overflow: hidden;
 
   #{$self}__image {
-    opacity: 0.6;
-    height: 100%;
+    opacity: 0.5;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 
@@ -18,6 +19,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      margin-top: scale(100);
     }
   }
   h2 {
@@ -28,7 +30,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: $founder;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1.2;
     margin: 0;
   }
   @include md {

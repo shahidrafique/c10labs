@@ -39,6 +39,9 @@
           &:after {
             content: ">";
           }
+          @include xs {
+            padding: 30px 0;
+          }
         }
       }
     }
@@ -48,36 +51,51 @@
     background: $white;
     position: relative;
     .container {
-      flex-direction: row;
+      flex-direction: column;
 
       .job-content {
         flex: 1;
         font-size: clamp(18px, scale(20), 24px);
+        line-height: 1.5;
+        max-width: clamp(500px, 100%, 1440px);
         a {
           color: $bright-red;
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       .job-title {
-        flex: 0.5;
-        font-size: clamp(30px, scale(60), 120px);
-        font-weight: bold;
-        color: $bright-red;
         // position: sticky;
         // top: 50px;
         display: flex;
+        h1 {
+          font-size: clamp(30px, scale(60), 120px);
+          font-weight: 600;
+          color: $bright-red;
+          max-width: clamp(500px, 100%, 1140px);
+          margin-bottom: 0;
+          line-height: 1.1;
+        }
         flex-direction: column;
         .btn-back {
           display: inline-flex;
           gap: 10px;
           font-size: 16px;
           color: $black;
-          font-weight: 300;
+          font-weight: 400;
           width: fit-content;
+          transition: 0.35s;
+          cursor: pointer;
           img {
-            width: 16px;
+            width: 10px;
+            display: inline-block;
+            transition: 0.35s;
           }
           &:hover {
-            color: $bright-red;
+            img {
+              transform: translateX(-5px);
+            }
           }
         }
       }

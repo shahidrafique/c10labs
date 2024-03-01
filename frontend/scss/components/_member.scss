@@ -18,17 +18,34 @@
     border: 1px solid $gray-light;
     border-top: 0;
     border-radius: 0 0 8px 8px;
+    position: relative;
     flex: 1;
     #{$self}__content__name {
-      font-size: clamp(24px, scale(36), 48px);
+      font-size: clamp(24px, scale(32), 42px);
       font-family: $founder;
       font-weight: 500;
-      margin-bottom: scale(10);
+      margin-bottom: 10px;
+      line-height: 1.2;
     }
     #{$self}__content__designation {
-      font-size: clamp(16px, scale(18), 24px);
+      font-size: clamp(16px, scale(18), 20px);
       color: $silver-gray;
-      max-width: 80%;
+      width: calc(100% - 40px);
+    }
+    #{$self}__content__linked {
+      width: clamp(32px, scale(40), 40px);
+      aspect-ratio: 1;
+      // height: scale(48);
+      background: url("/linked-in.png") center center no-repeat $silver-gray;
+      background-size: 60%;
+      border-radius: 50px;
+      display: inline-flex;
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      &:hover {
+        background-color: $bright-red;
+      }
     }
   }
 
