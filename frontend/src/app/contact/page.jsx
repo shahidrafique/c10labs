@@ -2,6 +2,10 @@ import Banner from "@/components/Banner";
 import { getContactPage } from "../../../api/controllers/contactPageController";
 import Form from "@/components/Form";
 
+export const metadata = {
+  title: "Contact Us",
+};
+
 export default async function Contact() {
   const props = await getContactPage();
   const { banner = {}, form } = props ?? {};

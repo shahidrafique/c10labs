@@ -4,6 +4,10 @@ import { getBuildPage } from "../../../../api/controllers/buildPageController";
 import Link from "next/link";
 import { Fragment } from "react";
 
+export const metadata = {
+  title: "Companies - Build",
+};
+
 export default async function Build() {
   const props = await getBuildPage();
 

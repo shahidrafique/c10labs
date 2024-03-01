@@ -4,6 +4,10 @@ import Company from "../../components/company";
 import Link from "next/link";
 import { Fragment } from "react";
 
+export const metadata = {
+  title: "Companies",
+};
+
 export default async function Companies() {
   const props = await getCompaniesPage();
   const {

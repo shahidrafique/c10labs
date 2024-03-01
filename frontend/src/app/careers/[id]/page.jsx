@@ -2,6 +2,10 @@ import Markdown from "react-markdown";
 import { getPost } from "../../../../api/controllers/postController";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Careers",
+};
+
 export default async function Post({ params: { id } }) {
   const props = await getPost(id);
   const [{ title = "", content = "" } = {}] = props ?? [];
