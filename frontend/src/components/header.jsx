@@ -2,9 +2,11 @@ import Link from "next/link";
 import { getHeader } from "../../api/controllers/headerController";
 import MenuButton from "@/components/menuButton";
 import StrapiImage from "./StrapiImage";
+import HeaderMenu from "./HeaderMenu";
 
 export default async function Header() {
   const props = await getHeader();
+
   const { menu: { links = [], image } = {} } = props ?? {};
 
   return (
@@ -15,15 +17,7 @@ export default async function Header() {
             <StrapiImage src={image?.url} alt="C10 Labs" />
           </Link>
         </div>
-        <ul className="nav">
-          {links.map(({ title, href = "" }) => (
-            <li key={href}>
-              <Link href={href} className="nav__item">
-                {title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <HeaderMenu links={links} />
       </div>
       <MenuButton />
     </header>
