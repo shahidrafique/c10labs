@@ -6,6 +6,10 @@ query home {
           data {
             attributes {
               title
+              link {
+                text
+                href
+              }
               video {
                 data {
                   attributes {
