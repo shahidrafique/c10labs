@@ -127,6 +127,8 @@
   &#{$self}--contact {
     position: relative;
     z-index: 1;
+    padding-bottom: 50px;
+
     #{$self}__sub-heading {
       width: scale(1000);
     }
