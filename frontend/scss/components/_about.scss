@@ -57,6 +57,9 @@
       object-fit: cover;
       mix-blend-mode: luminosity;
     }
+    @include md {
+      margin: scale(-100) 15px scale(-70) 0;
+    }
   }
   #{$self}__image__overlay {
     position: absolute;

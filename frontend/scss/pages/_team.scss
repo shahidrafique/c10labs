@@ -5,8 +5,11 @@
   gap: scale(30);
 
   align-items: flex-start;
-
   @include sm {
+    margin: 100px 0;
+  }
+
+  @include xs {
     flex-direction: column;
   }
 }
@@ -49,7 +52,7 @@
       display: flex;
       align-items: flex-end;
       color: white;
-      font-size: scale(16);
+      font-size: clamp(16px, scale(16), 24px);
     }
   }
 
@@ -61,7 +64,7 @@
       font-weight: 500;
     }
     p {
-      font-size: clamp(16px, scale(16), 24px);
+      font-size: clamp(14px, scale(16), 24px);
       margin: 0;
       font-weight: 300;
     }
@@ -109,7 +112,7 @@
     margin-top: 0 !important;
     #{$self}__image {
       .intro {
-        font-size: 16px;
+        font-size: 14px;
         padding: 15px;
       }
     }
