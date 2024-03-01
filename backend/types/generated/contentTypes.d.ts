@@ -1495,6 +1495,7 @@ export interface ApiPeoplePeople extends Schema.CollectionType {
     education: Attribute.String;
     designation: Attribute.String;
     image: Attribute.Media;
+    linkedin: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1846,6 +1847,7 @@ export interface ApiVideoBannerVideoBanner extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     video: Attribute.Media;
+    link: Attribute.Component<'banner.link'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
