@@ -13,6 +13,7 @@
       font-family: $founder;
       font-weight: 500;
       margin: 0;
+      line-height: 1;
     }
     p {
       font-size: clamp(20px, scale(24), 40px);
@@ -53,6 +54,7 @@
   }
 
   @include xs {
+    padding: 50px 0;
     #{$self}__content {
       p {
         width: 100%;

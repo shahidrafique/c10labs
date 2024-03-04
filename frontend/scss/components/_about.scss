@@ -98,8 +98,7 @@
       margin: 80px 0 50px;
     }
     #{$self}__image__overlay {
-      bottom: auto;
-      top: 50px;
+      bottom: 45%;
       img {
         height: 300px;
         object-fit: cover;

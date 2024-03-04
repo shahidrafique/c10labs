@@ -8,6 +8,9 @@ import StrapiImage from "./StrapiImage";
 export default function Sponsors({ logos }) {
   return (
     <section className="sponsors">
+      <div className="title">
+        <h3>Perks Partners</h3>
+      </div>
       <div className="logos-container">
         <Slider
           speed={5000}

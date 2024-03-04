@@ -46,6 +46,11 @@
       background-position: right top;
       z-index: 1;
     }
+    @include sm {
+      &:before {
+        background-size: cover;
+      }
+    }
   }
 
   &#{$self}--hero {
@@ -101,6 +106,14 @@
 
       z-index: 1;
     }
+    @include sm {
+      &:before {
+        background-size: cover;
+        height: 50vh;
+        background-position: 50% top;
+        top: -20px;
+      }
+    }
   }
 
   &#{$self}--process {
@@ -121,6 +134,14 @@
       background-size: contain;
 
       z-index: 1;
+    }
+    @include sm {
+      &:before {
+        background-size: cover;
+        height: 100vh;
+        background-position: right top;
+        top: -20px;
+      }
     }
   }
 
@@ -146,6 +167,14 @@
 
       z-index: 1;
     }
+    @include sm {
+      &:before {
+        background-size: cover;
+        height: 50vh;
+        top: -20px;
+        opacity: 1;
+      }
+    }
   }
 
   &#{$self}--careers {
@@ -167,6 +196,14 @@
       opacity: 0.5;
 
       z-index: 1;
+    }
+    @include sm {
+      &:before {
+        background-size: cover;
+        height: 30vh;
+        top: -20px;
+        opacity: 1;
+      }
     }
   }
 

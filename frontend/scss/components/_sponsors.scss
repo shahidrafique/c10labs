@@ -5,6 +5,50 @@
   border-bottom: 1px solid $gray-light;
   max-height: 236px;
   box-shadow: 0 20px 50px rgba($silver-gray, 0.1);
+  position: relative;
+
+  .title {
+    @extend .container;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    pointer-events: none;
+    h3 {
+      font-family: $founder;
+      font-size: 30px;
+      font-weight: 500;
+      position: relative;
+      color: $silver-gray;
+      text-transform: uppercase;
+      &:before {
+        content: "";
+
+        width: 200%;
+        height: 150px;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        background: rgb(255, 255, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.95) 15%,
+          rgba(255, 255, 255, 0.95) 85%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+    }
+    @include sm {
+      display: none;
+    }
+  }
+
   .logos-container {
     position: relative;
     z-index: 1;

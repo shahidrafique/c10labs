@@ -40,6 +40,7 @@
   }
 
   @include xs {
+    padding: 20px 0 50px;
     #{$self}__header {
       p {
         width: 100%;
