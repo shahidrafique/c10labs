@@ -19,7 +19,7 @@ query {
           }
         }
 
-        stories(pagination: { limit: 10 }) {
+        stories(pagination: { limit: 20 }) {
           data {
             attributes {
               title

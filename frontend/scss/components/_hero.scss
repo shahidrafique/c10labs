@@ -20,6 +20,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: none;
     }
 
     video {
@@ -59,6 +60,8 @@
     }
   }
 
+  // Cohort
+
   .cohort {
     color: white;
     position: absolute;
@@ -85,24 +88,17 @@
 
   @include sm {
     height: 80vh;
+    #{$self}__image {
+      video {
+        display: none;
+      }
+      img {
+        display: block;
+      }
+    }
     .cohort {
       font-size: 20px;
       left: 15px;
     }
   }
-}
-
-.video__wrapper {
-  padding: 56.25% 0 0 0;
-  position: relative;
-  @include sm {
-    height: 100%;
-  }
-}
-.video__player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }

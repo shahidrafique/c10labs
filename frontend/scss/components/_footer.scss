@@ -19,7 +19,7 @@
     gap: 30px;
     #{$self}__logo {
       display: flex;
-      width: 150px;
+      width: 260px;
 
       img {
         height: auto;
@@ -43,6 +43,10 @@
       gap: 15px;
       justify-content: space-between;
       width: 100%;
+      margin-bottom: 20px;
+      #{$self}__logo {
+        width: 200px;
+      }
       .social-media {
         img {
           width: 24px;
@@ -198,7 +202,7 @@
         li {
           width: 48%;
           a {
-            font-size: 12px;
+            font-size: 14px;
           }
         }
       }

@@ -93,6 +93,9 @@
     position: relative;
     z-index: 1;
     padding: scale(100) 0;
+    #{$self}__sub-heading {
+      width: scale(1000);
+    }
 
     &:before {
       content: "";

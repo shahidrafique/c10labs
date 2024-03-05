@@ -70,7 +70,6 @@
 
   #{$self}__image {
     width: 100%;
-    aspect-ratio: 1.8;
 
     img {
       height: 100%;
@@ -78,6 +77,7 @@
       object-fit: cover;
       border-radius: 8px 8px 0 0;
       vertical-align: top;
+      aspect-ratio: 1.75;
     }
   }
   #{$self}__content {
@@ -117,15 +117,7 @@
     width: calc(33.3% - 2.1vw);
     flex: none;
     background: $gray-lightest;
-    #{$self}__image {
-      width: 100%;
-      img {
-        width: 100%;
-        aspect-ratio: 1.5;
-        object-fit: cover;
-        vertical-align: top;
-      }
-    }
+
     #{$self}__content {
       .tag {
         font-size: 12px;
@@ -161,7 +153,7 @@
         justify-content: space-between;
 
         h3 {
-          font-size: clamp(24px, scale(32), 42px);
+          font-size: clamp(24px, scale(42), 60px);
         }
         p {
           font-size: clamp(14px, scale(16), 20px);
