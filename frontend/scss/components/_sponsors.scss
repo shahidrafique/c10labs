@@ -47,19 +47,39 @@
   }
 
   .logos-container {
+    overflow: hidden;
+    white-space: nowrap;
     position: relative;
-    z-index: 1;
+    display: flex;
+    width: 100%;
 
-    img {
-      vertical-align: top;
-      height: 36px;
-      aspect-ratio: 4;
-      opacity: 0.4;
+    .logos-slide {
       display: inline-block;
-      transition: 0.35s;
-      object-fit: contain;
-      &:hover {
-        opacity: 1;
+      animation: 35s slide infinite linear;
+      display: flex;
+      gap: 100px;
+
+      img {
+        vertical-align: top;
+        height: 36px;
+
+        // aspect-ratio: 6;
+        opacity: 0.4;
+        display: block;
+        transition: 0.35s;
+        object-fit: contain;
+        &:first-child {
+          margin-left: 100px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    &:hover {
+      .logos-slide {
+        animation-play-state: paused;
       }
     }
   }
@@ -68,14 +88,25 @@
     max-height: 156px;
     .logos-container {
       overflow: hidden;
+      .logos-slide {
+        gap: 50px;
 
-      img {
-        height: 30px;
-        aspect-ratio: 2;
+        img {
+          height: 24px;
+          &:first-child {
+            margin-left: 50px;
+          }
+        }
       }
     }
   }
-  .slick-slide {
-    margin: 0 scale(50);
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
