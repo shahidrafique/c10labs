@@ -12,7 +12,7 @@ export default function VideoBanner({
     <section className="hero">
       <div className="container">
         <div className="hero__image ">
-          <video loop="true" autoplay="autoplay" muted>
+          <video loop autoPlay muted>
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
           <img src="/hero-image.jpg" alt="Hero" />
