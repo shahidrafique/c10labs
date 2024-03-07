@@ -25,12 +25,12 @@ export default async function Privacy() {
           <p>
             This privacy policy describes our personal information practices
             when you use our chat spaces, visit our website at
-            <span class="wixui-rich-text__text">
+            <span className="wixui-rich-text__text">
               <a
                 href="http://c10labs.com/"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="wixui-rich-text__text"
+                className="wixui-rich-text__text"
               >
                 {" "}
                 c10labs.com
@@ -45,7 +45,7 @@ export default async function Privacy() {
           </p>
 
           <h2>
-            <span class="wixui-rich-text__text">Table of Contents</span>
+            <span className="wixui-rich-text__text">Table of Contents</span>
           </h2>
           <ul className="table-content">
             <li>Collection And Use Of Personal Information</li>
@@ -142,7 +142,7 @@ export default async function Privacy() {
             <a
               data-auto-recognition="true"
               href="mailto:team@c10labs.com"
-              class="wixui-rich-text__text"
+              className="wixui-rich-text__text"
             >
               team@c10labs.com
             </a>
@@ -274,23 +274,23 @@ export default async function Privacy() {
             other engagement data) in order to evaluate and improve the user
             experience and the Website. For more information or to opt-out using
             the Google Analytics opt-out browser add-on, see “
-            <span class="wixui-rich-text__text">
+            <span className="wixui-rich-text__text">
               <a
                 href="https://policies.google.com/technologies/partner-sites?hl=en"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="wixui-rich-text__text"
+                className="wixui-rich-text__text"
               >
                 How Google uses data when you use our partners’ sites or apps
               </a>
             </span>
             ” and “
-            <span class="wixui-rich-text__text">
+            <span className="wixui-rich-text__text">
               <a
                 href="https://support.google.com/analytics/answer/6004245"
                 target="_blank"
                 rel="noreferrer noopener"
-                class="wixui-rich-text__text"
+                className="wixui-rich-text__text"
               >
                 Google Analytics and Privacy
               </a>
@@ -431,7 +431,7 @@ export default async function Privacy() {
             <a
               data-auto-recognition="true"
               href="mailto:team@c10labs.com"
-              class="wixui-rich-text__text"
+              className="wixui-rich-text__text"
             >
               team@c10labs.com
             </a>

@@ -12,17 +12,17 @@ export default function Sponsors({ logos }) {
         <h3>Perks Partners</h3>
       </div>
       <div className="logos-container">
-        <div class="logos-slide">
+        <div className="logos-slide">
           {logos?.map(({ logos: [{ url }] }) => (
             <StrapiImage key={url + 1} src={url} alt="sponsors" />
           ))}
         </div>
-        <div class="logos-slide">
+        <div className="logos-slide">
           {logos?.map(({ logos: [{ url }] }) => (
             <StrapiImage key={url + 1} src={url} alt="sponsors" />
           ))}
         </div>
-        <div class="logos-slide">
+        <div className="logos-slide">
           {logos?.map(({ logos: [{ url }] }) => (
             <StrapiImage key={url + 1} src={url} alt="sponsors" />
           ))}
