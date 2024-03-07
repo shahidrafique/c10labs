@@ -42,7 +42,22 @@
       }
     }
     @include sm {
-      display: none;
+      transform: none;
+      margin-bottom: 10px;
+      margin-top: -20px;
+
+      position: static;
+      left: auto;
+      h3 {
+        font-size: 16px;
+        text-align: center;
+        display: block;
+        width: 100%;
+
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 
@@ -62,8 +77,6 @@
       img {
         vertical-align: top;
         height: 36px;
-
-        // aspect-ratio: 6;
         opacity: 0.4;
         display: block;
         transition: 0.35s;
