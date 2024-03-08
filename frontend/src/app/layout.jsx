@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../../scss/styles.scss";
 
 import Header from "../components/header";
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           defer
           src="//js.hs-scripts.com/44606217.js"
         />
+        <GoogleAnalytics gaId="G-WX56FQ4CJW" />
       </body>
     </html>
   );
