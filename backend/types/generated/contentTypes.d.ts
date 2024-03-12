@@ -1070,6 +1070,7 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
     singularName: 'company';
     pluralName: 'companies';
     displayName: 'company';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1078,6 +1079,7 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
     name: Attribute.String;
     href: Attribute.String;
     image: Attribute.Media;
+    description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
