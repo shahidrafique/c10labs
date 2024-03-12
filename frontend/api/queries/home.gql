@@ -60,6 +60,7 @@ query home {
                   attributes {
                     name
                     href
+                    description
                     image {
                       data {
                         attributes {

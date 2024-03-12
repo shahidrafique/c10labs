@@ -19,8 +19,14 @@ export default function Companies({
           <p>{content}</p>
         </section>
         <section className="companies__container">
-          {companies.map(({ name, href = "", image }) => (
-            <Company key={name} title={name} src={image?.url} link={href} />
+          {companies.map(({ name, href = "", image, description }) => (
+            <Company
+              key={name}
+              title={name}
+              src={image?.url}
+              link={href}
+              description={description}
+            />
           ))}
         </section>
         {/* {button ? (

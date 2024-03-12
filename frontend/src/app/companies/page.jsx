@@ -46,12 +46,13 @@ export default async function Companies() {
           <section className="companies companies--inner-page">
             <div className="container">
               <div className="companies__container">
-                {companies.map(({ name, image, href = "" }) => (
+                {companies.map(({ name, image, href = "", description }) => (
                   <Company
                     key={name}
                     title={name}
                     src={image?.url}
                     link={href}
+                    description={description}
                     inner
                   />
                 ))}

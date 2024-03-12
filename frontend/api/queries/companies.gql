@@ -42,6 +42,7 @@ query {
                   attributes {
                     name
                     href
+                    description
                     image {
                       data {
                         attributes {
