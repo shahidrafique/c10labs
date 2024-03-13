@@ -17,7 +17,7 @@ export default function Company({
         <div className="company__content">
           <div className="upper-part">
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p>{inner ? description ?? title : description}</p>
           </div>
           <div className="lower-part"></div>
         </div>

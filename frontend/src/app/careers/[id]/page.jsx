@@ -1,6 +1,7 @@
 import Markdown from "react-markdown";
 import { getPost } from "../../../../api/controllers/postController";
 import Link from "next/link";
+import MarkdownLink from "@/components/MarkdownLink";
 
 export const metadata = {
   title: "C10 Labs - Careers",
@@ -22,7 +23,7 @@ export default async function Post({ params: { id } }) {
             <h1>{title}</h1>
           </div>
           <div className="job-content">
-            <Markdown>{content}</Markdown>
+            <Markdown components={{ a: MarkdownLink }}>{content}</Markdown>
           </div>
         </div>
       </div>

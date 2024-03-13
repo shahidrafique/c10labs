@@ -1,3 +1,6 @@
+import Markdown from "react-markdown";
+import MarkdownLink from "./MarkdownLink";
+
 export default function Banner({
   title = "",
   content = "",
@@ -15,7 +18,9 @@ export default function Banner({
             <br />
             <span>{titleB}</span>
           </h1>
-          <div className="banner__sub-heading">{content}</div>
+          <div className="banner__sub-heading">
+            <Markdown components={{ a: MarkdownLink }}>{content}</Markdown>
+          </div>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import { getCareerPage } from "../../../api/controllers/careerPageController";
 import Markdown from "react-markdown";
 import Link from "next/link";
 import { getJobs } from "../../../api/controllers/jobsController";
+import MarkdownLink from "@/components/MarkdownLink";
 
 export const metadata = {
   title: "C10 Labs - Careers",
@@ -23,7 +24,7 @@ export default async function Careers() {
       <section className="jobs">
         <div className="container">
           <div className="page-content">
-            <Markdown>{content}</Markdown>
+            <Markdown components={{ a: MarkdownLink }}>{content}</Markdown>
           </div>
 
           <p>{menuTitle}</p>

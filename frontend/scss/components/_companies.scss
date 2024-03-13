@@ -129,6 +129,7 @@
     border: 1px solid $gray-light;
     box-shadow: 0 0 20px rgba($black, 0);
     transition: box-shadow 0.35s;
+    aspect-ratio: 2;
 
     display: flex;
     flex-direction: column;
@@ -141,7 +142,7 @@
         width: clamp(120px, scale(240), 280px);
         height: clamp(80px, scale(120), 140px);
         object-fit: contain;
-        transition: 0.35s;
+        // transition: 0.35s;
       }
     }
     #{$self}__content {
@@ -166,7 +167,7 @@
         width: 100%;
         height: 100%;
         background-color: rgba($black, 0.85);
-        margin: 0 0 10px;
+        margin: 0;
         font-size: clamp(16px, scale(16), 20px);
         color: $white;
         display: flex;
@@ -174,6 +175,7 @@
         align-items: center;
         opacity: 0;
         transition: 0.35s;
+        padding: 15px;
       }
       a {
         margin-top: scale(10);

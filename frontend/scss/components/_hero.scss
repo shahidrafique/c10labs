@@ -66,12 +66,16 @@
     color: white;
     position: absolute;
     left: calc(50% + 3vw);
-    bottom: scale(130);
+    bottom: scale(140);
     font-size: scale(54);
     font-family: $founder;
     font-weight: 500;
     span {
-      color: $bright-red;
+      font-size: 20px;
+      display: block;
+      margin-bottom: -15px;
+      font-weight: normal;
+      letter-spacing: 2px;
     }
     &:hover {
       color: $bright-red;

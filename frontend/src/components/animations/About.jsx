@@ -7,7 +7,7 @@ export default function AboutAnimations() {
   useGSAP(() => {
     if (window.innerWidth >= 768)
       gsap.to(".about__image", {
-        yPercent: -20,
+        yPercent: -15,
         ease: "none",
         scrollTrigger: {
           trigger: ".about",
