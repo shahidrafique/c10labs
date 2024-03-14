@@ -1,3 +1,5 @@
+import redirects from "./configs/redirects.js";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config) => {
@@ -12,6 +14,9 @@ const nextConfig = {
     loader: "custom",
     loaderFile: "/src/loaders/image.js",
   },
+  redirects,
 };
 
 export default nextConfig;
+//Users/abdullah.qureshi/Documents/c10labs/frontend/configs/redirects.js
+//Users/abdullah.qureshi/Documents/c10labs/frontend/configs/redirects
