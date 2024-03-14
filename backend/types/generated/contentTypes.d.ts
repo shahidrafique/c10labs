@@ -1648,6 +1648,37 @@ export interface ApiProcessPageProcessPage extends Schema.SingleType {
   };
 }
 
+export interface ApiRedirectRedirect extends Schema.CollectionType {
+  collectionName: 'redirects';
+  info: {
+    singularName: 'redirect';
+    pluralName: 'redirects';
+    displayName: 'Redirects';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    from: Attribute.String;
+    to: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::redirect.redirect',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::redirect.redirect',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSponsorSponsor extends Schema.CollectionType {
   collectionName: 'sponsors';
   info: {
@@ -1909,6 +1940,7 @@ declare module '@strapi/types' {
       'api::post.post': ApiPostPost;
       'api::process.process': ApiProcessProcess;
       'api::process-page.process-page': ApiProcessPageProcessPage;
+      'api::redirect.redirect': ApiRedirectRedirect;
       'api::sponsor.sponsor': ApiSponsorSponsor;
       'api::stories-page.stories-page': ApiStoriesPageStoriesPage;
       'api::story.story': ApiStoryStory;
