@@ -34,7 +34,7 @@ export default function Companies({
             {button.text}
           </Link>
         ) : null} */}
-        <Link href="/companies" className="button">
+        <Link href={button.href} className="button">
           {button.text}
         </Link>
       </section>
