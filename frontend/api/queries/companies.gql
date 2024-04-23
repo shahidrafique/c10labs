@@ -1,42 +1,12 @@
 query {
-  companyPage {
+  companiesPages(filters: { slug: { eq: "%s" } }, pagination: { limit: 1 }) {
     data {
       attributes {
-        banner {
-          data {
-            attributes {
-              cssClass
-              title
-              content
-              background {
-                data {
-                  attributes {
-                    url
-                  }
-                }
-              }
-            }
-          }
-        }
-        menu {
-          data {
-            attributes {
-              links {
-                href
-                title
-              }
-            }
-          }
-        }
+        content
+        slug
         companySections {
           data {
             attributes {
-              title
-              content
-              button {
-                text
-                href
-              }
               companies(pagination: { limit: 100 }) {
                 data {
                   attributes {

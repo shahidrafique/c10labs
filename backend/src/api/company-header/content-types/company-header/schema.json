@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "companies_page",
+  "collectionName": "company_headers",
   "info": {
-    "singularName": "company-page",
-    "pluralName": "companies-page",
-    "displayName": "Companies",
-    "description": ""
+    "singularName": "company-header",
+    "pluralName": "company-headers",
+    "displayName": "Company Header"
   },
   "options": {
     "draftAndPublish": true
@@ -16,11 +15,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::banner.banner"
-    },
-    "companySections": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::company-section.company-section"
     },
     "menu": {
       "type": "relation",

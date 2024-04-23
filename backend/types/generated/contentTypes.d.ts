@@ -937,91 +937,6 @@ export interface ApiBannerBanner extends Schema.CollectionType {
   };
 }
 
-export interface ApiBuildBuild extends Schema.SingleType {
-  collectionName: 'builds';
-  info: {
-    singularName: 'build';
-    pluralName: 'builds';
-    displayName: 'Build';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    banner: Attribute.Relation<
-      'api::build.build',
-      'oneToOne',
-      'api::banner.banner'
-    >;
-    companySections: Attribute.Relation<
-      'api::build.build',
-      'oneToMany',
-      'api::company-section.company-section'
-    >;
-    menu: Attribute.Relation<'api::build.build', 'oneToOne', 'api::menu.menu'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::build.build',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::build.build',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiBuildPageBuildPage extends Schema.SingleType {
-  collectionName: 'build_pages';
-  info: {
-    singularName: 'build-page';
-    pluralName: 'build-pages';
-    displayName: 'buildPage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    banner: Attribute.Relation<
-      'api::build-page.build-page',
-      'oneToOne',
-      'api::banner.banner'
-    >;
-    menu: Attribute.Relation<
-      'api::build-page.build-page',
-      'oneToOne',
-      'api::menu.menu'
-    >;
-    companySections: Attribute.Relation<
-      'api::build-page.build-page',
-      'oneToMany',
-      'api::company-section.company-section'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::build-page.build-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::build-page.build-page',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiCareersPageCareersPage extends Schema.SingleType {
   collectionName: 'careers_pages';
   info: {
@@ -1064,6 +979,43 @@ export interface ApiCareersPageCareersPage extends Schema.SingleType {
   };
 }
 
+export interface ApiCompaniesPageCompaniesPage extends Schema.CollectionType {
+  collectionName: 'companies_pages';
+  info: {
+    singularName: 'companies-page';
+    pluralName: 'companies-pages';
+    displayName: 'Companies Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.RichText;
+    companySections: Attribute.Relation<
+      'api::companies-page.companies-page',
+      'oneToMany',
+      'api::company-section.company-section'
+    >;
+    slug: Attribute.UID & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::companies-page.companies-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::companies-page.companies-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCompanyCompany extends Schema.CollectionType {
   collectionName: 'companies';
   info: {
@@ -1098,30 +1050,24 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
   };
 }
 
-export interface ApiCompanyPageCompanyPage extends Schema.SingleType {
-  collectionName: 'companies_page';
+export interface ApiCompanyHeaderCompanyHeader extends Schema.SingleType {
+  collectionName: 'company_headers';
   info: {
-    singularName: 'company-page';
-    pluralName: 'companies-page';
-    displayName: 'Companies';
-    description: '';
+    singularName: 'company-header';
+    pluralName: 'company-headers';
+    displayName: 'Company Header';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     banner: Attribute.Relation<
-      'api::company-page.company-page',
+      'api::company-header.company-header',
       'oneToOne',
       'api::banner.banner'
     >;
-    companySections: Attribute.Relation<
-      'api::company-page.company-page',
-      'oneToMany',
-      'api::company-section.company-section'
-    >;
     menu: Attribute.Relation<
-      'api::company-page.company-page',
+      'api::company-header.company-header',
       'oneToOne',
       'api::menu.menu'
     >;
@@ -1129,13 +1075,13 @@ export interface ApiCompanyPageCompanyPage extends Schema.SingleType {
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::company-page.company-page',
+      'api::company-header.company-header',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::company-page.company-page',
+      'api::company-header.company-header',
       'oneToOne',
       'admin::user'
     > &
@@ -1921,11 +1867,10 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::advisors-page.advisors-page': ApiAdvisorsPageAdvisorsPage;
       'api::banner.banner': ApiBannerBanner;
-      'api::build.build': ApiBuildBuild;
-      'api::build-page.build-page': ApiBuildPageBuildPage;
       'api::careers-page.careers-page': ApiCareersPageCareersPage;
+      'api::companies-page.companies-page': ApiCompaniesPageCompaniesPage;
       'api::company.company': ApiCompanyCompany;
-      'api::company-page.company-page': ApiCompanyPageCompanyPage;
+      'api::company-header.company-header': ApiCompanyHeaderCompanyHeader;
       'api::company-section.company-section': ApiCompanySectionCompanySection;
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::footer.footer': ApiFooterFooter;

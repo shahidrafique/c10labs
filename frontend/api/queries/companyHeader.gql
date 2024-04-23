@@ -1,0 +1,34 @@
+query {
+  companyHeader {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              cssClass
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        menu {
+          data {
+            attributes {
+              links {
+                href
+                title
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
