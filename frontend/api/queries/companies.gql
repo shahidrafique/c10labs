@@ -8,6 +8,7 @@ query {
           data {
             attributes {
               title
+              content
               companies(pagination: { limit: 100 }) {
                 data {
                   attributes {
