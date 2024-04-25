@@ -16,6 +16,7 @@
   z-index: 100;
   background: $gray-light;
   border-bottom: 1px solid $gray-light;
+  overflow: auto;
 
   .container {
     gap: 15px;
