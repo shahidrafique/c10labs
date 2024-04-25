@@ -26,10 +26,11 @@ export default async function CompaniesSection({ params: { slug = "" } }) {
                 <Markdown>{content}</Markdown>
               </div>
             ) : (
-              companies.map(({ name, image, href = "" }) => (
+              companies.map(({ name, image, href = "", description }) => (
                 <Company
                   key={name}
                   title={name}
+                  description={description}
                   src={image?.url}
                   link={href}
                   inner
