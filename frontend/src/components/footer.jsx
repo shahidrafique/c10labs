@@ -40,11 +40,18 @@ export default async function Header() {
         <div className="footer-right">
           <div className="footer__nav">
             <ul>
-              {menus[0]?.links.map(({ title, href = "" }) => (
-                <li key={href}>
-                  <Link href={href}>{title}</Link>
-                </li>
-              ))}
+              {menus[0]?.links.map(
+                ({ title, href = "", isExternal = false }) => (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      target={isExternal ? "_blank" : undefined}
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         </div>
