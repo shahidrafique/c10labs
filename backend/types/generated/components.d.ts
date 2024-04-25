@@ -57,6 +57,7 @@ export interface LinkLink extends Schema.Component {
   attributes: {
     title: Attribute.String;
     href: Attribute.String;
+    isExternal: Attribute.Boolean;
   };
 }
 
