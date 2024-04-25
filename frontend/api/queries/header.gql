@@ -8,6 +8,7 @@ query {
               links {
                 href
                 title
+                isExternal
               }
               image {
                 data {

@@ -8,10 +8,11 @@ export default function HeaderMenu({ links }) {
 
   return (
     <ul className="nav">
-      {links.map(({ title, href = "" }) => (
+      {links.map(({ title, href = "", isExternal = false }) => (
         <li key={href}>
           <Link
             href={href}
+            target={isExternal ? "_blank" : undefined}
             className={`nav__item ${
               pathname === href ? "nav__item--active" : ""
             }`}

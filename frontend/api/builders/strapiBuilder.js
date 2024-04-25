@@ -7,9 +7,11 @@ export default function strapiBuilder(query) {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ query }),
       });
+      const r = await res.json();
+      //console.log(r);
       const {
         data: { [key]: data },
-      } = await res.json();
+      } = r;
       return parser(data);
     } catch (e) {
       console.log(e);
