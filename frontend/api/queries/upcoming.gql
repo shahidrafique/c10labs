@@ -1,0 +1,25 @@
+query {
+  upcomingPage {
+    data {
+      attributes {
+        banner {
+          data {
+            attributes {
+              cssClass
+              title
+              content
+              background {
+                data {
+                  attributes {
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
+        iframeLink
+      }
+    }
+  }
+}
