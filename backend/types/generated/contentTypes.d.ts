@@ -1767,6 +1767,41 @@ export interface ApiStorySectionStorySection extends Schema.CollectionType {
   };
 }
 
+export interface ApiUpcomingPageUpcomingPage extends Schema.SingleType {
+  collectionName: 'upcoming_pages';
+  info: {
+    singularName: 'upcoming-page';
+    pluralName: 'upcoming-pages';
+    displayName: 'Upcoming Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    banner: Attribute.Relation<
+      'api::upcoming-page.upcoming-page',
+      'oneToOne',
+      'api::banner.banner'
+    >;
+    iframeLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::upcoming-page.upcoming-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::upcoming-page.upcoming-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiVenturesPageVenturesPage extends Schema.SingleType {
   collectionName: 'ventures_pages';
   info: {
@@ -1890,6 +1925,7 @@ declare module '@strapi/types' {
       'api::stories-page.stories-page': ApiStoriesPageStoriesPage;
       'api::story.story': ApiStoryStory;
       'api::story-section.story-section': ApiStorySectionStorySection;
+      'api::upcoming-page.upcoming-page': ApiUpcomingPageUpcomingPage;
       'api::ventures-page.ventures-page': ApiVenturesPageVenturesPage;
       'api::video-banner.video-banner': ApiVideoBannerVideoBanner;
     }
