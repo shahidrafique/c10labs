@@ -4,7 +4,8 @@
   "info": {
     "singularName": "header",
     "pluralName": "headers",
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::menu.menu"
+    },
+    "notificationBar": {
+      "displayName": "Notification Bar",
+      "type": "component",
+      "repeatable": false,
+      "component": "notification-bar.notification-bar"
     }
   }
 }

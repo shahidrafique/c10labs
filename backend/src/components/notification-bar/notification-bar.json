@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_notification_bar_notification_bars",
+  "info": {
+    "displayName": "Notification Bar"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "show": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1268,6 +1268,7 @@ export interface ApiHeaderHeader extends Schema.SingleType {
     singularName: 'header';
     pluralName: 'headers';
     displayName: 'Header';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1278,6 +1279,7 @@ export interface ApiHeaderHeader extends Schema.SingleType {
       'oneToOne',
       'api::menu.menu'
     >;
+    notificationBar: Attribute.Component<'notification-bar.notification-bar'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

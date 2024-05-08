@@ -75,6 +75,17 @@ export interface NewsletterNewsLetter extends Schema.Component {
   };
 }
 
+export interface NotificationBarNotificationBar extends Schema.Component {
+  collectionName: 'components_notification_bar_notification_bars';
+  info: {
+    displayName: 'Notification Bar';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    show: Attribute.Boolean;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -84,6 +95,7 @@ declare module '@strapi/types' {
       'input.input': InputInput;
       'link.link': LinkLink;
       'newsletter.news-letter': NewsletterNewsLetter;
+      'notification-bar.notification-bar': NotificationBarNotificationBar;
     }
   }
 }
