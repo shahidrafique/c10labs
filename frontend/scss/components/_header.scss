@@ -1,8 +1,7 @@
 .header {
   background: rgba($gray-lightest, 0.9);
   // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 84px;
-  display: flex;
+  // display: flex;
   align-items: center;
   position: sticky;
   z-index: 100;
@@ -13,6 +12,10 @@
   .container {
     justify-content: space-between;
     align-items: center;
+  }
+
+  .nav {
+    height: 84px;
   }
 
   .logo {
@@ -71,6 +74,34 @@
     .nav {
       @include md {
         max-height: 500px;
+      }
+    }
+  }
+
+  .notification-bar {
+    background-color: #750014;
+    padding: 1rem 0;
+
+    color: white;
+    font-size: 24px;
+
+    .container {
+      align-items: center;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      svg {
+        width: 24px;
+        height: 24px;
       }
     }
   }
