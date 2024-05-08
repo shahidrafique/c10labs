@@ -1,16 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
 import MarkdownLink from "./MarkdownLink";
 
-export default function NotificationBar({
-  content,
-  buttonText,
-  buttonHref,
-  show,
-}) {
+export default function NotificationBar({ content, show }) {
   const [isVisible, setIsVisible] = useState(show);
 
   return (
@@ -19,9 +13,7 @@ export default function NotificationBar({
       style={{ display: isVisible ? "block" : "none" }}
     >
       <div className="container">
-        <Markdown components={{ a: MarkdownLink }}>
-          {content.toString()}
-        </Markdown>
+        <Markdown components={{ a: MarkdownLink }}>{content}</Markdown>
         {/* {buttonText ? <Link href={}>{buttonText}</Link>: null} */}
         <button
           onClick={() => setIsVisible(false)}
