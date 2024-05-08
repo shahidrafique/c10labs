@@ -82,9 +82,9 @@ export interface NotificationBarNotificationBar extends Schema.Component {
     description: '';
   };
   attributes: {
-    content: Attribute.Blocks;
     show: Attribute.Boolean;
     button: Attribute.Component<'button.button'>;
+    content: Attribute.RichText;
   };
 }
 
