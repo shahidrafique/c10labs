@@ -22,10 +22,7 @@ query {
         }
         notificationBar {
           content
-          button {
-            text
-            href
-          }
+          show
         }
       }
     }
