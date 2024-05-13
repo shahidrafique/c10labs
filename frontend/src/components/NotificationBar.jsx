@@ -1,24 +1,13 @@
-"use client";
-
-import { useState } from "react";
 import Markdown from "react-markdown";
 import MarkdownLink from "./MarkdownLink";
 
-export default function NotificationBar({ content, show }) {
-  const [isVisible, setIsVisible] = useState(show);
-
+export default function NotificationBar({ content, hide }) {
   return (
-    <div
-      className="notification-bar"
-      style={{ display: isVisible ? "block" : "none" }}
-    >
+    <div className="notification-bar">
       <div className="container">
         <Markdown components={{ a: MarkdownLink }}>{content}</Markdown>
-        {/* {buttonText ? <Link href={}>{buttonText}</Link>: null} */}
-        <button
-          onClick={() => setIsVisible(false)}
-          className="material-symbols-rounded"
-        >
+
+        <button onClick={hide} className="material-symbols-rounded">
           <svg
             viewBox="0 0 24 25"
             fill="none"

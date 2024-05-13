@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import SetupAnimations from "./setupAnimations";
 import Script from "next/script";
+import { getHeader } from "@/api/controllers/headerController";
 
 export const metadata = {
   title: "C10 Labs",
@@ -19,11 +20,12 @@ const font = Poppins({
   display: "swap",
 });
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const props = await getHeader();
   return (
     <html lang="en" className={font.variable}>
       <body>
-        <Header />
+        <Header {...props} />
         {children}
         <Footer />
         <SetupAnimations />

@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { getHeader } from "../../api/controllers/headerController";
 import MenuButton from "@/components/menuButton";
@@ -5,21 +8,18 @@ import StrapiImage from "./StrapiImage";
 import HeaderMenu from "./HeaderMenu";
 import NotificationBar from "./NotificationBar";
 
-export default async function Header() {
-  const props = await getHeader();
-
-  const {
-    menu: { links = [], image } = {},
-    notificationBar: { content = "", button = {}, show = true },
-  } = props ?? {};
-
+export default function Header({
+  menu: { links = [], image } = {},
+  notificationBar: { content = "", button = {}, show = true },
+}) {
+  const [isVisible, setIsVisible] = useState(show);
   return (
-    <header className="header">
+    <header className={`header  ${isVisible ? "show--notification" : ""}`}>
       <NotificationBar
         content={content}
         buttonHref={button.href}
         buttonText={button.text}
-        show={show}
+        hide={() => setIsVisible(false)}
       />
       <div className="container">
         <div className="logo">
