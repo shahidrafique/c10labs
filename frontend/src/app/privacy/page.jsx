@@ -1,5 +1,8 @@
 export const metadata = {
-  title: "C10 Labs - Privacy Policy",
+  title: "C10 Labs: Privacy Policy",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default async function Privacy() {

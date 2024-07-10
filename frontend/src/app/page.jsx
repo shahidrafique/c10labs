@@ -6,10 +6,6 @@ import Companies from "@/components/Companies";
 import Stories from "@/components/Stories";
 import { getHomePage } from "../../api/controllers/homePageController";
 
-export const metadata = {
-  title: "C10 Labs",
-};
-
 export default async function Home() {
   const props = await getHomePage();
   const { mainBanner, about, companySection, banner, storySection, sponsors } =

@@ -3,9 +3,18 @@ import { getPost } from "../../../../api/controllers/postController";
 import Link from "next/link";
 import MarkdownLink from "@/components/MarkdownLink";
 
-export const metadata = {
+const metadata = {
   title: "C10 Labs - Careers",
 };
+
+export function generateMetada({ params: { id } }) {
+  return {
+    ...metadata,
+    alternates: {
+      canonical: `/careers/${id}`,
+    },
+  };
+}
 
 export default async function Post({ params: { id } }) {
   const props = await getPost(id);

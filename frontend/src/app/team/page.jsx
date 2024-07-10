@@ -5,7 +5,10 @@ import Markdown from "react-markdown";
 import Link from "next/link";
 
 export const metadata = {
-  title: "C10 Labs - Our Team",
+  title: "C10 Labs: Our Team",
+  alternates: {
+    canonical: "/teams",
+  },
 };
 
 export default async function Team() {

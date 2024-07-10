@@ -1,12 +1,12 @@
 import Banner from "@/components/Banner";
 import { getAdvisorsPage } from "../../../../api/controllers/advisorsPageController";
 import Member from "../../../components/member";
-import Head from "next/head";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
 
 export const metadata = {
-  title: "C10 Labs - Advisors",
+  title: "C10 Labs: Advisors",
+  alternates: {
+    canonical: "/teams/advisors",
+  },
 };
 
 export default async function Advisors() {

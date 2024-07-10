@@ -9,8 +9,31 @@ import Script from "next/script";
 import { getHeader } from "@/api/controllers/headerController";
 
 export const metadata = {
-  title: "C10 Labs",
-  description: "AI VENTURE STUDIO",
+  metadataBase: new URL("https://c10labs.com"),
+  title: "C10 Labs: Innovating the Future of AI Ventures",
+  description:
+    "Leading AI venture studio fund creating impactful AI-first ventures. Join our ecosystem to accelerate your startup with expert technology and operational support.",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "C10 Labs: Innovating the Future of AI Ventures",
+    description:
+      "Leading AI venture studio fund creating impactful AI-first ventures. Join our ecosystem to accelerate your startup with expert technology and operational support.",
+    siteName: "C10 Labs",
+    images: [
+      {
+        url: "/favicon.png",
+      },
+    ],
+  },
+  twitter: {
+    site: "@c10labs",
+    images: "/favicon.png",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 const font = Poppins({

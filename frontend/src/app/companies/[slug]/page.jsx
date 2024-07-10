@@ -3,9 +3,18 @@ import { Fragment } from "react";
 import { getCompaniesPage } from "../../../../api/controllers/companiesPageController";
 import Markdown from "react-markdown";
 
-export const metadata = {
-  title: "C10 Labs - Companies - Build",
+const metadata = {
+  title: "C10 Labs: Companies - Build",
 };
+
+export function generateMetada({ params: { id } }) {
+  return {
+    ...metadata,
+    alternates: {
+      canonical: `/careers/${id}`,
+    },
+  };
+}
 
 export default async function CompaniesSection({ params: { slug = "" } }) {
   const [{ companySections = [] }] = await getCompaniesPage(slug);

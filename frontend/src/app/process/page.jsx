@@ -4,7 +4,10 @@ import Markdown from "react-markdown";
 import ProcessAnimations from "@/components/animations/Process";
 
 export const metadata = {
-  title: "C10 Labs - Process",
+  title: "C10 Labs: Process",
+  alternates: {
+    canonical: "/process",
+  },
 };
 
 export default async function Process() {

@@ -6,7 +6,10 @@ import { getJobs } from "../../../api/controllers/jobsController";
 import MarkdownLink from "@/components/MarkdownLink";
 
 export const metadata = {
-  title: "C10 Labs - Careers",
+  title: "C10 Labs: Careers",
+  alternates: {
+    canonical: "/careers",
+  },
 };
 
 export default async function Careers() {

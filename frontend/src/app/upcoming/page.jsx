@@ -1,6 +1,13 @@
 import Banner from "@/components/Banner";
 import { getUpcomingPage } from "@/api/controllers/getUpcomingPageController";
 
+export const metadata = {
+  title: "C10 Labs: Upcoming",
+  alternates: {
+    canonical: "/upcoming",
+  },
+};
+
 export default async function UpcomingPage() {
   const { banner, iframeLink } = await getUpcomingPage();
 

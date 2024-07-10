@@ -4,7 +4,10 @@ import { getVenturesPage } from "../../../../api/controllers/venturesPageControl
 import Link from "next/link";
 
 export const metadata = {
-  title: "C10 Labs - Ventures",
+  title: "C10 Labs: Ventures",
+  alternates: {
+    canonical: "/teams/ventures",
+  },
 };
 
 export default async function Advisors() {
