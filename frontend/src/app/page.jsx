@@ -19,6 +19,22 @@ export default async function Home() {
       <Companies {...companySection} />
       <Parallax {...banner} />
       <Stories {...storySection} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "C10 Labs",
+              "url": "https://c10labs.com/",
+              "logo": "https://admin.c10labs.com/uploads/logo_3d6f8cb795.svg",
+              "sameAs": [
+                "https://www.linkedin.com/company/c10labs/",
+                "https://twitter.com/c10labs"
+              ]
+            }`,
+        }}
+      />
     </main>
   );
 }

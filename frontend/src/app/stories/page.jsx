@@ -17,6 +17,27 @@ export default async function StoriesPage() {
     <main>
       <Banner {...banner} />
       <Stories stories={stories} inner />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+            "@context":"http://schema.org",
+            "@type":"ItemList",
+            "name":"Latest Stories",
+            "numberOfItems": ${stories.length},
+            "itemListOrder":"Descending",
+            "itemListElement":${JSON.stringify(
+              stories.map(({ title, href }, i) => ({
+                "@id": href,
+                "@type": "Article",
+                position: i + 1,
+                headline: title,
+              }))
+            )}
+        }
+      `,
+        }}
+      />
     </main>
   );
 }
