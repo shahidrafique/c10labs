@@ -1,5 +1,6 @@
 import Script from "next/script";
 import HeroAnimations from "./animations/Hero";
+import Link from "next/link";
 
 export default function VideoBanner({
   video = { url: "" },
@@ -23,6 +24,9 @@ export default function VideoBanner({
             <br />
             <span className="red">{titleRed}</span>
           </h1>
+          <Link href="/contact" className="button">
+            Contact Us
+          </Link>
         </div>
       </div>
 
