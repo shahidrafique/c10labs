@@ -1775,6 +1775,7 @@ export interface ApiUpcomingPageUpcomingPage extends Schema.SingleType {
     singularName: 'upcoming-page';
     pluralName: 'upcoming-pages';
     displayName: 'Upcoming Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1786,6 +1787,7 @@ export interface ApiUpcomingPageUpcomingPage extends Schema.SingleType {
       'api::banner.banner'
     >;
     iframeLink: Attribute.String;
+    content: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
