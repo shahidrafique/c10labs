@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import { getUpcomingPage } from "@/api/controllers/getUpcomingPageController";
+import Markdown from "react-markdown";
 
 export const metadata = {
   title: "C10 Labs: Upcoming",
@@ -9,7 +10,7 @@ export const metadata = {
 };
 
 export default async function UpcomingPage() {
-  const { banner, iframeLink } = await getUpcomingPage();
+  const { banner, iframeLink, content } = await getUpcomingPage();
 
   return (
     <main>
@@ -23,6 +24,11 @@ export default async function UpcomingPage() {
             height="100%"
             style={{ background: "transparent", border: "1px solid #ccc" }}
           />
+        </div>
+      </div>
+      <div className="upcoming_content">
+        <div className="container">
+          <Markdown>{content}</Markdown>
         </div>
       </div>
     </main>
