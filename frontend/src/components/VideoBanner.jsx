@@ -24,7 +24,7 @@ export default function VideoBanner({
             <br />
             <span className="red">{titleRed}</span>
           </h1>
-          <Link href="/contact" className="button">
+          <Link href="/contact" className="button button__outline">
             Contact Us
           </Link>
         </div>

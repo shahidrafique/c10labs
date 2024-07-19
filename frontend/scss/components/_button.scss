@@ -72,3 +72,18 @@
     color: $black;
   }
 }
+
+.button__outline {
+  padding: 0 1.5625vw;
+
+  &:before {
+    display: none;
+  }
+
+  &:hover {
+    outline: none;
+    border-color: black;
+    background-color: black;
+    color: white;
+  }
+}

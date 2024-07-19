@@ -29,14 +29,14 @@ export default function Companies({
             />
           ))}
         </section>
-        {/* {button ? (
-          <Link href={button.hre ?? ""} className="button">
+        <div className="button-group">
+          <Link href={button.href} className="button">
             {button.text}
           </Link>
-        ) : null} */}
-        <Link href={button.href} className="button">
-          {button.text}
-        </Link>
+          <Link href="/contact" className="button button__outline">
+            Contact Us
+          </Link>
+        </div>
       </section>
     </section>
   );

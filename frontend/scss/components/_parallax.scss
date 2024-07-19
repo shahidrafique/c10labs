@@ -22,17 +22,22 @@
       margin-top: scale(100);
     }
   }
-  h2 {
-    font-size: clamp(48px, scale(60), 80px);
+
+  &__content {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: clamp(48px, scale(60), 80px);
+
     font-family: $founder;
     font-weight: 500;
     line-height: 1.2;
-    margin: 0;
   }
   @include md {
     h2 {
