@@ -33,9 +33,6 @@ export default function Companies({
           <Link href={button.href} className="button">
             {button.text}
           </Link>
-          <Link href="/contact" className="button button__outline">
-            Contact Us
-          </Link>
         </div>
       </section>
     </section>

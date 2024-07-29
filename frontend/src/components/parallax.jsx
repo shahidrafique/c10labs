@@ -10,9 +10,6 @@ export default function Parallax({ title, background }) {
       </div>
       <div className="parallax__content">
         <h2>{title}</h2>
-        <Link href="contact" className="button button__outline">
-          For Inquiry Contact Us
-        </Link>
       </div>
       <ParallaxAnimations />
     </section>
