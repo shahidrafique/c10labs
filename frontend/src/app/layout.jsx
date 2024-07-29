@@ -11,6 +11,8 @@ import { getHeader } from "@/api/controllers/headerController";
 export const metadata = {
   metadataBase: new URL("https://c10labs.com"),
   title: "C10 Labs: Innovating the Future of AI Ventures",
+  keywords:
+    "AI,Venture Studio,Venture Capital,VC,Cambridge,Startups,Early-Stage,Boston,AI Accelerator,AI Fund,AI Innovation Hub ,AI-First VC,AI Enablement,AI Investments,Dimensional AI ,AI Massachusetts,AI Community Boston,Future of AI Boston,Future of AI Startups,Upcoming AI Events Boston",
   description:
     "Leading AI venture studio fund creating impactful AI-first ventures. Join our ecosystem to accelerate your startup with expert technology and operational support.",
   robots: "index, follow",
