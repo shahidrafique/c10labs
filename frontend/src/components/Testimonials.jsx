@@ -53,7 +53,7 @@ export const Testimonials = ({ testimonials }) => {
           style={{ "--slide": `${-slide * 100}%` }}
         >
           {testimonials.map(({ content, avatar, name, designation }) => (
-            <article class="testimonial">
+            <article key={name} class="testimonial">
               <div class="testimonial__content">
                 <div class="testimonial__content__text">{content}</div>
                 <div class="lower-part">
