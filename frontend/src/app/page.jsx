@@ -5,11 +5,19 @@ import VideoBanner from "@/components/VideoBanner";
 import Companies from "@/components/Companies";
 import Stories from "@/components/Stories";
 import { getHomePage } from "../../api/controllers/homePageController";
+import { Testimonials } from "@/components/Testimonials";
 
 export default async function Home() {
   const props = await getHomePage();
-  const { mainBanner, about, companySection, banner, storySection, sponsors } =
-    props;
+  const {
+    mainBanner,
+    about,
+    companySection,
+    banner,
+    storySection,
+    sponsors,
+    testimonials,
+  } = props;
 
   return (
     <main>
@@ -18,6 +26,7 @@ export default async function Home() {
       <Sponsors logos={sponsors} />
       <Companies {...companySection} />
       <Parallax {...banner} />
+      <Testimonials testimonials={testimonials ?? []} />
       <Stories {...storySection} />
       <script
         type="application/ld+json"

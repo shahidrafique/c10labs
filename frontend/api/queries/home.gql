@@ -88,6 +88,24 @@ query home {
             }
           }
         }
+        testimonials {
+          data {
+            attributes {
+              avatar {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+              name
+              designation
+              content
+            }
+          }
+        }
         storySection {
           data {
             attributes {

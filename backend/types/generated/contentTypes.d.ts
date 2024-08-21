@@ -1340,6 +1340,11 @@ export interface ApiIndexIndex extends Schema.SingleType {
       'oneToOne',
       'api::company-section.company-section'
     >;
+    testimonials: Attribute.Relation<
+      'api::index.index',
+      'oneToMany',
+      'api::testimonial.testimonial'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1769,6 +1774,39 @@ export interface ApiStorySectionStorySection extends Schema.CollectionType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonials';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    designation: Attribute.String;
+    content: Attribute.RichText;
+    avatar: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiUpcomingPageUpcomingPage extends Schema.SingleType {
   collectionName: 'upcoming_pages';
   info: {
@@ -1929,6 +1967,7 @@ declare module '@strapi/types' {
       'api::stories-page.stories-page': ApiStoriesPageStoriesPage;
       'api::story.story': ApiStoryStory;
       'api::story-section.story-section': ApiStorySectionStorySection;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::upcoming-page.upcoming-page': ApiUpcomingPageUpcomingPage;
       'api::ventures-page.ventures-page': ApiVenturesPageVenturesPage;
       'api::video-banner.video-banner': ApiVideoBannerVideoBanner;

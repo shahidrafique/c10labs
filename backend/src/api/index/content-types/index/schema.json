@@ -41,6 +41,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::company-section.company-section"
+    },
+    "testimonials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::testimonial.testimonial"
     }
   }
 }
