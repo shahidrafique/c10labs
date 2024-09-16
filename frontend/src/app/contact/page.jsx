@@ -23,6 +23,7 @@ export default async function Contact() {
               region="na1"
               portalId="44606217"
               formId="4f67d4cc-472c-46aa-b1db-f7797315a726"
+              shouldResize
             />
           </div>
         </div>
